@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class PlayerDeath : MonoBehaviour
 {
 
+    public Health_bar healthbar;
+
     private Animator anim;
     private Rigidbody2D rig;
 
@@ -16,6 +18,7 @@ public class PlayerDeath : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        healthbar.Setmaxvalue(PlayerHealth);
         anim = GetComponent<Animator>();
         rig = GetComponent<Rigidbody2D>();
     }
@@ -51,7 +54,8 @@ public class PlayerDeath : MonoBehaviour
     public void TakeDamege(int damage)
     {
         PlayerHealth -= damage;
-        Debug.Log(PlayerHealth);
+        Debug.Log("Player health = "+PlayerHealth);
+        healthbar.UpdateHealthbar(PlayerHealth);
 
         if (PlayerHealth <= 0)
         {
@@ -59,6 +63,29 @@ public class PlayerDeath : MonoBehaviour
             Die();
         }
 
+    }
+
+    public void takeHealth(int item)
+    {
+        if (item == 0)
+        {
+            PlayerHealth = 100;
+            healthbar.UpdateHealthbar(PlayerHealth);
+        }
+        else if (item == 1)
+        {
+            if (PlayerHealth + 25 > 100)
+            {
+                PlayerHealth = 100;
+            }
+            else
+            {
+                PlayerHealth += 25;
+            }
+
+            healthbar.UpdateHealthbar(PlayerHealth);
+            Debug.Log(PlayerHealth);
+        }
     }
 
 }

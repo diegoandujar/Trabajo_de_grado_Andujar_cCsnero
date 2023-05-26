@@ -9,45 +9,40 @@ public class ItemCollector : MonoBehaviour
     //OnTriggerEnter2D ya que se coloco en Cherry la casilla is trigger
     //Si no se coloco la casilla is trigger se utiliza OnCollisionEnter2D
 
-    public int CherryCount = 0;
+    public int Bullets = 0;
 
 
     [SerializeField] private AudioSource CollectSound;
 
-    [SerializeField] private Text CherriesText;
-
+    [SerializeField] private Text BulletsText;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Cherry"))
+        if (collision.gameObject.CompareTag("BulletColect"))
         {
             CollectSound.Play();
             Destroy(collision.gameObject);
-            CherryCount++;
-            CherriesText.text = "Cherries: " + CherryCount;
-
+            Bullets++;
+            WriteOntext(Bullets);
         } 
         else if (collision.CompareTag("Botiquin"))
         {
-            transform.GetComponent<PlayerDeath>().PlayerHealth = 100;
-            Debug.Log(transform.GetComponent<PlayerDeath>().PlayerHealth);
+            transform.GetComponent<PlayerDeath>().takeHealth(0);
             Destroy(collision.gameObject);
         }
         else if (collision.CompareTag("Venda"))
         {
-            if(transform.GetComponent<PlayerDeath>().PlayerHealth + 25 > 100)
-            {
-                transform.GetComponent<PlayerDeath>().PlayerHealth = 100;
-            }  else
-            {
-                transform.GetComponent<PlayerDeath>().PlayerHealth += 25;
-            }
-
-            Debug.Log(transform.GetComponent<PlayerDeath>().PlayerHealth);
+            transform.GetComponent<PlayerDeath>().takeHealth(1);
             Destroy(collision.gameObject);
         }
         
 
 
     }
+
+    public void WriteOntext(int bullets)
+    {
+        BulletsText.text = "Bullets: " + Bullets;
+    }
+
 }

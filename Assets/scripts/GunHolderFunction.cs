@@ -11,6 +11,7 @@ public class GunHolderFunction : MonoBehaviour
     
     private BullletMovement damagebullet;
     private Weapon weapon;
+    public int BulletDamage;
 
     private void Awake()
     {
@@ -30,14 +31,17 @@ public class GunHolderFunction : MonoBehaviour
         if (number == 1)
         {
             spriteRenderer.sprite = m1911;
-            damagebullet.setDamage(damage);
+            BulletDamage = damage;
+            //damagebullet.setDamage(damage);
             weapon.canShoot = true;
             
         }
         else if (number == 2)
         {
             spriteRenderer.sprite = m1Garand;
-            damagebullet.setDamage(damage);
+            BulletDamage = damage;
+            //damagebullet.setDamage(damage);
+            Debug.Log("el dano pasado es de " + BulletDamage);
             weapon.canShoot = true;
 
         }

@@ -43,22 +43,13 @@ public class EnemyFunction : MonoBehaviour
         AnimantionUpdate();
     }
 
-    /*
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
         if (collision.CompareTag("Player"))
         {
             patrolRange = true;
-
-            if (collision.transform.position.x < transform.position.x && right)
-            {
-                flip();
-            }
-            else if(collision.transform.position.x > transform.position.x && !right)
-            {
-                flip();
-            }
             
         }
     }
@@ -70,7 +61,7 @@ public class EnemyFunction : MonoBehaviour
             patrolRange = false;
         }
     }
-    */
+    
 
     public void TakeDamege(int damage)
     {

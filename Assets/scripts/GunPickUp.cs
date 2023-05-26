@@ -37,14 +37,15 @@ public class GunPickUp : MonoBehaviour
         {
             canTake = true; 
         }
-        else if (collision.CompareTag("Bullet"))
-        {
-            Destroy(collision.gameObject);
-        }
         else if (collision.CompareTag("BulletEnemy")) 
         {
             Destroy(collision.gameObject);
         }
+        /*else if (collision.CompareTag("Bullet"))
+        {
+            Destroy(collision.gameObject);
+        }*/
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
