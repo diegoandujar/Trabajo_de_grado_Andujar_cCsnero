@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     private BoxCollider2D coll;
+    public bool mover = true;
 
     [SerializeField] private LayerMask jumpableGround;
 
@@ -48,16 +49,19 @@ public class PlayerMovement : MonoBehaviour
 
         // Jump y horizontal son direcciones a las teclas que unitiy nos da para esos movimientos horizontal(left right a and d) jump(space)
 
-        dirX = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
-
-        if ((Input.GetKeyDown("up") || Input.GetKeyDown("w"))&& IsGrounded())
+        if (mover == true)
         {
-            JumpingSound.Play();
-            rb.velocity = new Vector2(rb.velocity.x , jumpSpeed);
-        }
+            dirX = Input.GetAxisRaw("Horizontal");
+            rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
+            
+            if ((Input.GetKeyDown("up") || Input.GetKeyDown("w"))&& IsGrounded())
+            {
+                JumpingSound.Play();
+                rb.velocity = new Vector2(rb.velocity.x , jumpSpeed);
+            }
 
-        AnimantionUpdate();
+            AnimantionUpdate();
+        }
         
     }
 

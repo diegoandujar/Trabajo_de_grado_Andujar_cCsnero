@@ -162,3 +162,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 2
   damage: 50
+  type: 1

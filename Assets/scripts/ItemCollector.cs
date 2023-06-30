@@ -10,11 +10,12 @@ public class ItemCollector : MonoBehaviour
     //Si no se coloco la casilla is trigger se utiliza OnCollisionEnter2D
 
     public int Bullets = 0;
-
+    public int Bullets2 = 0;
 
     [SerializeField] private AudioSource CollectSound;
 
     [SerializeField] private Text BulletsText;
+    [SerializeField] private Text bullets2Text;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -22,9 +23,16 @@ public class ItemCollector : MonoBehaviour
         {
             CollectSound.Play();
             Destroy(collision.gameObject);
-            Bullets++;
-            WriteOntext(Bullets);
-        } 
+            Bullets = Bullets + 10;
+            WriteOntext(Bullets,0);
+        }
+        else if (collision.gameObject.CompareTag("BulletCollect2"))
+        {
+            CollectSound.Play();
+            Destroy(collision.gameObject);
+            Bullets2 = Bullets2 + 10;
+            WriteOntext(Bullets2,1);
+        }
         else if (collision.CompareTag("Botiquin"))
         {
             transform.GetComponent<PlayerDeath>().takeHealth(0);
@@ -40,9 +48,42 @@ public class ItemCollector : MonoBehaviour
 
     }
 
-    public void WriteOntext(int bullets)
+    public void WriteOntext(int bullets, int bala)
     {
-        BulletsText.text = "Bullets: " + Bullets;
+        if (bala == 0)
+        {
+            BulletsText.text = "Small Bullets: " + Bullets;
+        }
+        else
+        {
+            bullets2Text.text = "Big Bullets: " + Bullets2;
+        }
+       
+    }
+
+    public int Bulletcoutns()
+    {
+        return Bullets;
+    }
+
+    public int bulletcounts2()
+    {
+        return Bullets2;
+    }
+
+    public void deleteBullet(int bullet)
+    {
+        if (bullet == 0)
+        {
+            Bullets = Bullets - 1;
+            WriteOntext(Bullets,0);
+        }
+        else
+        {
+            Bullets2 = Bullets2 - 1;
+            WriteOntext(Bullets2, 1);
+        }
+        
     }
 
 }

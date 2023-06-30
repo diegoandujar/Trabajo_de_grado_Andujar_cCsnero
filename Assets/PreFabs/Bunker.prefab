@@ -199,6 +199,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c40eafe27ca35444d8a6b2eb163c3e48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Item1: {fileID: 1879025544414434174, guid: b2c5c3e5ba977c643a8666e054f53e71, type: 3}
+  Item2: {fileID: 5580735112290558868, guid: 48d0e28d68b35a84c803c27fee6e940b, type: 3}
+  Item3: {fileID: 5580735112290558868, guid: ba6d3cad1ca61ec42bc00133eba30c63, type: 3}
   BunkerHealh: 100
   botiquin: {fileID: 1879025544414434174, guid: b2c5c3e5ba977c643a8666e054f53e71, type: 3}
 --- !u!95 &1200134178255658042

@@ -40,6 +40,15 @@ public class PlayerDeath : MonoBehaviour
 
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("mine"))
+        {
+            DeadSound.Play();
+            Die();
+        }
+    }
+
     private void Die()
     {
         rig.bodyType = RigidbodyType2D.Static;

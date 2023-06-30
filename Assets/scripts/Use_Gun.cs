@@ -10,6 +10,7 @@ public class Use_Gun : MonoBehaviour
 
     public int number;
     public int damage;
+    
 
 
     private void Awake()

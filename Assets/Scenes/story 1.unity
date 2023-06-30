@@ -1347,8 +1347,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 37, y: 230}
-  m_SizeDelta: {x: 733.0646, y: 68.4373}
+  m_AnchoredPosition: {x: 0.000012875, y: 96.739}
+  m_SizeDelta: {x: 777.777, y: 433.5217}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1224623345
 MonoBehaviour:
@@ -1363,7 +1363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1372,18 +1372,24 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 877a8c46a1af3df4d8cd2000ad892a92, type: 3}
-    m_FontSize: 38
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: THE BEST GAME EVER!
+    m_LineSpacing: 1.5
+  m_Text: "El Dia-D es uno de los d\xEDas m\xE1s importantes en la historia de la
+    humanidad, este ocurrio el 6 de junio de 1941, este dia dio por inicio la Operaci\xF3n
+    Overlord, dicha operaci\xF3n consist\xEDa en un gran desembarco en las playas
+    de Normandia, Francia con la finalidad de abrir un nuevo frente en la Europa
+    y reducir el dominio alem\xE1n, durante el primer dia de invasiones se estima
+    que murieron mas de 10000 aliados.\n\n\nTu mision es invadir la playa Omaha y
+    tomar control de la misma cueste lo que cueste"
 --- !u!222 &1224623346
 CanvasRenderer:
   m_ObjectHideFlags: 0

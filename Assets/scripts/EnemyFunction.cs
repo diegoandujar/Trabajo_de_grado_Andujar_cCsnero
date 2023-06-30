@@ -7,6 +7,10 @@ public class EnemyFunction : MonoBehaviour
 {
     public int health = 100;
 
+    public GameObject Item;
+
+    private int numberDead = 0;
+
     private Animator anim;
     private SpriteRenderer SpRen;
 
@@ -68,9 +72,12 @@ public class EnemyFunction : MonoBehaviour
         health -= damage;
         Debug.Log(health);
 
-        if(health <= 0)
+        if(health <= 0 && numberDead == 0)
         {
             Die();
+            //getRandomItem();
+            SpawnItem();
+            numberDead++;
         }
 
     }
@@ -107,6 +114,12 @@ public class EnemyFunction : MonoBehaviour
 
         transform.Rotate(0f, 180f, 0f);
 
+    }
+
+    public void SpawnItem()
+    {
+        Vector2 EnemyPos = new Vector2(transform.position.x + 1, transform.position.y - 0.4f);
+        Instantiate(Item, EnemyPos, Quaternion.identity);
     }
 
 }
