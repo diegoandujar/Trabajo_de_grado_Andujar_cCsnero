@@ -256,15 +256,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titulo: M1 Garand
-  texto: "Es un fusil semiautom\xE1tico de calibre .30 que fue el fusil de servicio
-    est\xE1ndar de los Estados Unidos durante la Segunda Guerra Mundial y la Guerra
-    de Corea y tambi\xE9n vio un servicio limitado durante la Guerra de Vietnam.
-    La mayor\xEDa de los fusiles M1 fueron suministrados a las fuerzas armadas estadounidenses,
-    aunque tambi\xE9n se proporcionaron muchos cientos de miles como ayuda extranjera
-    a los aliados estadounidenses. El Garand todav\xEDa es utilizado por equipos
-    de entrenamiento militar y guardias militares de honor. Tambi\xE9n es ampliamente
-    utilizado por civiles para la caza, tiro al blanco y como objeto de colecci\xF3n
-    militar."
+  texto: 'Fabricante: Springfield Armory, Winchester Repeating Arms, International
+    Harvester Company, Harrington & Richardson, Beretta, entre otros. '
+  texto1: "Pa\xEDs de producci\xF3n: Estados Unidos."
+  texto2: "A\xF1os de fabricaci\xF3n: 1936-1957. "
+  texto3: "Tipo de armamento: Rifle semiautom\xE1tico. "
+  texto4: "El M1 Garand fue el rifle est\xE1ndar utilizado por las fuerzas armadas
+    estadounidenses durante la Segunda Guerra Mundial y la Guerra de Corea. Fue el
+    primer rifle semiautom\xE1tico de uso generalizado y ten\xEDa un cargador interno
+    que sosten\xEDa ocho rondas de munici\xF3n. Era un rifle robusto y fiable, aunque
+    su peso y longitud lo hac\xEDan menos maniobrable en espacios reducidos. "
   imagen: {fileID: 21300000, guid: d690d428eb0c1b3439b84b1b22758fb2, type: 3}
 --- !u!114 &41332801
 MonoBehaviour:
@@ -440,6 +441,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 193786627}
   m_CullTransparentMesh: 1
+--- !u!1 &248799269
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 248799270}
+  - component: {fileID: 248799272}
+  - component: {fileID: 248799271}
+  m_Layer: 5
+  m_Name: Informacion (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &248799270
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248799269}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 972324610}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 125.756165, y: -101}
+  m_SizeDelta: {x: 793.1977, y: 41.9278}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &248799271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248799269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 877a8c46a1af3df4d8cd2000ad892a92, type: 3}
+    m_FontSize: 12
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &248799272
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248799269}
+  m_CullTransparentMesh: 1
 --- !u!1 &254760260
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,15 +654,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titulo: MG42
-  texto: "Es un fusil semiautom\xE1tico de calibre .30 que fue el fusil de servicio
-    est\xE1ndar de los Estados Unidos durante la Segunda Guerra Mundial y la Guerra
-    de Corea y tambi\xE9n vio un servicio limitado durante la Guerra de Vietnam.
-    La mayor\xEDa de los fusiles M1 fueron suministrados a las fuerzas armadas estadounidenses,
-    aunque tambi\xE9n se proporcionaron muchos cientos de miles como ayuda extranjera
-    a los aliados estadounidenses. El Garand todav\xEDa es utilizado por equipos
-    de entrenamiento militar y guardias militares de honor. Tambi\xE9n es ampliamente
-    utilizado por civiles para la caza, tiro al blanco y como objeto de colecci\xF3n
-    militar."
+  texto: "Fue producida por la compa\xF1\xEDa alemana Maschinenbau-Aktiengesellschaft
+    (Mauser) y la ametralladora MG42 fue producida por la compa\xF1\xEDa alemana
+    Grossfuss AG. "
+  texto1: "Pa\xEDs de producci\xF3n: Alemania."
+  texto2: "A\xF1os de fabricaci\xF3n: La MG34 se produjo desde 1934 hasta 1945, y
+    la MG42 se produjo desde 1942 hasta 1945. "
+  texto3: "Tipo de armamento: Ambas ametralladoras eran armas autom\xE1ticas de calibre
+    7,92 mm y se utilizaban principalmente como armas de apoyo para proporcionar
+    fuego de cobertura a las fuerzas alemanas en el campo de batalla. La MG42 fue
+    conocida por su alta cadencia de fuego y su capacidad para disparar hasta 1.200
+    disparos por minuto. "
+  texto4: "La MG34 y la MG42 fueron dos de las ametralladoras m\xE1s utilizadas por
+    las fuerzas alemanas durante la Segunda Guerra Mundial. La MG34 fue dise\xF1ada
+    en la d\xE9cada de 1930 como una ametralladora de prop\xF3sito general para reemplazar
+    a las ametralladoras ligeras anteriores. La MG42, por otro lado, se dise\xF1\xF3
+    para ser m\xE1s f\xE1cil y m\xE1s barata de producir en masa, lo que permiti\xF3
+    a las fuerzas alemanas equipar a m\xE1s soldados con ametralladoras. Ambas ametralladoras
+    eran extremadamente efectivas en su papel de armas de apoyo y se utilizaron en
+    una variedad de roles, desde defensa de posiciones hasta ataque y asalto. "
   imagen: {fileID: 21300000, guid: 221a9e735e2938f4eada8b917bdad607, type: 3}
 --- !u!114 &261564953
 MonoBehaviour:
@@ -730,15 +821,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titulo: MP40
-  texto: "Es un fusil semiautom\xE1tico de calibre .30 que fue el fusil de servicio
-    est\xE1ndar de los Estados Unidos durante la Segunda Guerra Mundial y la Guerra
-    de Corea y tambi\xE9n vio un servicio limitado durante la Guerra de Vietnam.
-    La mayor\xEDa de los fusiles M1 fueron suministrados a las fuerzas armadas estadounidenses,
-    aunque tambi\xE9n se proporcionaron muchos cientos de miles como ayuda extranjera
-    a los aliados estadounidenses. El Garand todav\xEDa es utilizado por equipos
-    de entrenamiento militar y guardias militares de honor. Tambi\xE9n es ampliamente
-    utilizado por civiles para la caza, tiro al blanco y como objeto de colecci\xF3n
-    militar."
+  texto: 'Fabricante: Erma, Steyr, Haenel y otros fabricantes alemanes '
+  texto1: "Pa\xEDs de producci\xF3n: Alemania"
+  texto2: "A\xF1os de fabricaci\xF3n: 1940-1945 "
+  texto3: 'Tipo de armamento: Subfusil '
+  texto4: "La MP40, tambi\xE9n conocida como Maschinenpistole 40, fue un subfusil
+    dise\xF1ado y fabricado en Alemania durante la Segunda Guerra Mundial. Fue desarrollado
+    como una mejora de la anterior MP38, y se convirti\xF3 en el subfusil est\xE1ndar
+    utilizado por la infanter\xEDa alemana durante la Segunda Guerra Mundial. La
+    MP40 disparaba cartuchos de 9 mm y ten\xEDa un cargador de 32 cartuchos. Ten\xEDa
+    una cadencia de fuego de hasta 500 disparos por minuto y un alcance efectivo
+    de hasta 200 metros. La MP40 era una arma compacta y ligera, lo que la hac\xEDa
+    f\xE1cil de manejar, y se utiliz\xF3 en numerosos conflictos durante la Segunda
+    Guerra Mundial, incluyendo la invasi\xF3n de Polonia, la Batalla de Stalingrado
+    y la Batalla de Normand\xEDa. La MP40 tambi\xE9n fue utilizada por otros pa\xEDses
+    y por grupos guerrilleros en todo el mundo despu\xE9s de la guerra. La MP40 es
+    una de las armas m\xE1s ic\xF3nicas de la Segunda Guerra Mundial y ha aparecido
+    en numerosas pel\xEDculas y videojuegos. "
   imagen: {fileID: 21300000, guid: 01309ae77f4c1614d93caeebf70ac866, type: 3}
 --- !u!114 &287546413
 MonoBehaviour:
@@ -865,11 +964,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 972324610}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 135.05145, y: 159.26086}
+  m_AnchoredPosition: {x: 135.05145, y: 165}
   m_SizeDelta: {x: 494.1659, y: 182.931}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &348420544
@@ -885,7 +984,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6792453, g: 0.29156286, b: 0.29156286, a: 1}
+  m_Color: {r: 0.6792453, g: 0.29156286, b: 0.29156286, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1021,12 +1120,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 972324610}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 122.81, y: -125.58603}
-  m_SizeDelta: {x: 799.09, y: 365.668}
+  m_AnchoredPosition: {x: 125.756165, y: 34.698097}
+  m_SizeDelta: {x: 793.1977, y: 67.0999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &542213938
 MonoBehaviour:
@@ -1050,12 +1149,12 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 877a8c46a1af3df4d8cd2000ad892a92, type: 3}
-    m_FontSize: 14
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1123,15 +1222,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titulo: Mauser C96
-  texto: "Es un fusil semiautom\xE1tico de calibre .30 que fue el fusil de servicio
-    est\xE1ndar de los Estados Unidos durante la Segunda Guerra Mundial y la Guerra
-    de Corea y tambi\xE9n vio un servicio limitado durante la Guerra de Vietnam.
-    La mayor\xEDa de los fusiles M1 fueron suministrados a las fuerzas armadas estadounidenses,
-    aunque tambi\xE9n se proporcionaron muchos cientos de miles como ayuda extranjera
-    a los aliados estadounidenses. El Garand todav\xEDa es utilizado por equipos
-    de entrenamiento militar y guardias militares de honor. Tambi\xE9n es ampliamente
-    utilizado por civiles para la caza, tiro al blanco y como objeto de colecci\xF3n
-    militar."
+  texto: 'Fabricante: Mauser '
+  texto1: "Pa\xEDs de producci\xF3n: Alemania "
+  texto2: "A\xF1os de fabricaci\xF3n: 1896-1937 "
+  texto3: "Tipo de armamento: Pistola semiautom\xE1tica "
+  texto4: "La Mauser C96 es una pistola semiautom\xE1tica dise\xF1ada y fabricada
+    por la compa\xF1\xEDa alemana Mauser. Fue producida por primera vez en 1896 y
+    se mantuvo en producci\xF3n hasta 1937. La Mauser C96 es conocida por su caracter\xEDstico
+    cargador en forma de peine, que pod\xEDa contener hasta 10 cartuchos. La pistola
+    disparaba cartuchos de 7,63 mm y ten\xEDa un alcance efectivo de hasta 200 metros.
+    La Mauser C96 era una pistola muy popular en su \xE9poca, y se utiliz\xF3 en
+    numerosos conflictos, incluyendo la Primera Guerra Mundial, la Guerra Civil espa\xF1ola
+    y la Segunda Guerra Mundial. Tambi\xE9n fue utilizada por figuras hist\xF3ricas
+    como Winston Churchill y Mao Zedong. Adem\xE1s, la Mauser C96 fue exportada a
+    muchos pa\xEDses y su dise\xF1o inspir\xF3 a otros fabricantes de armas, incluyendo
+    a Astra, que produjo una versi\xF3n bajo licencia en Espa\xF1a. "
   imagen: {fileID: 21300000, guid: 3f22bd0dc4bd33541858e72089173b6e, type: 3}
 --- !u!114 &596155835
 MonoBehaviour:
@@ -1307,6 +1412,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 618749286}
   m_CullTransparentMesh: 1
+--- !u!1 &658804568
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 658804569}
+  - component: {fileID: 658804571}
+  - component: {fileID: 658804570}
+  m_Layer: 5
+  m_Name: Informacion (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &658804569
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658804568}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 972324610}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 125.756165, y: -219.3913}
+  m_SizeDelta: {x: 793.1977, y: 185.1673}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &658804570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658804568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 877a8c46a1af3df4d8cd2000ad892a92, type: 3}
+    m_FontSize: 12
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &658804571
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658804568}
+  m_CullTransparentMesh: 1
 --- !u!1 &722870859
 GameObject:
   m_ObjectHideFlags: 0
@@ -1439,20 +1624,24 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 972324609}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 254760261}
-  - {fileID: 542213937}
   - {fileID: 348420543}
-  m_Father: {fileID: 1200560981}
+  - {fileID: 542213937}
+  - {fileID: 1852882356}
+  - {fileID: 1657678021}
+  - {fileID: 248799270}
+  - {fileID: 658804569}
+  m_Father: {fileID: 1664692298}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -133.61566, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &972324611
@@ -1469,6 +1658,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titulo: {fileID: 254760262}
   texto: {fileID: 542213938}
+  texto1: {fileID: 1852882357}
+  texto2: {fileID: 1657678022}
+  texto3: {fileID: 248799271}
+  texto4: {fileID: 658804570}
   imagen: {fileID: 348420544}
 --- !u!1 &991867831
 GameObject:
@@ -1523,15 +1716,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titulo: STEN
-  texto: "Es un fusil semiautom\xE1tico de calibre .30 que fue el fusil de servicio
-    est\xE1ndar de los Estados Unidos durante la Segunda Guerra Mundial y la Guerra
-    de Corea y tambi\xE9n vio un servicio limitado durante la Guerra de Vietnam.
-    La mayor\xEDa de los fusiles M1 fueron suministrados a las fuerzas armadas estadounidenses,
-    aunque tambi\xE9n se proporcionaron muchos cientos de miles como ayuda extranjera
-    a los aliados estadounidenses. El Garand todav\xEDa es utilizado por equipos
-    de entrenamiento militar y guardias militares de honor. Tambi\xE9n es ampliamente
-    utilizado por civiles para la caza, tiro al blanco y como objeto de colecci\xF3n
-    militar."
+  texto: "Fabricante: Varios fabricantes brit\xE1nicos"
+  texto1: "Pa\xEDs de producci\xF3n: Reino Unido "
+  texto2: "A\xF1os de fabricaci\xF3n: 1941-1945 "
+  texto3: 'Tipo de armamento: Subfusil '
+  texto4: "La STEN gun es un subfusil brit\xE1nico que fue dise\xF1ado y producido
+    durante la Segunda Guerra Mundial. La STEN gun fue desarrollada para ser una
+    arma econ\xF3mica y f\xE1cil de producir en grandes cantidades, ya que el Reino
+    Unido necesitaba armamento r\xE1pido para equipar a sus tropas durante la guerra.
+    La STEN gun disparaba cartuchos de 9 mm y ten\xEDa un cargador de 32 cartuchos.
+    Ten\xEDa una cadencia de fuego de hasta 550 disparos por minuto y un alcance
+    efectivo de hasta 100 metros. La STEN gun era una arma simple y efectiva, pero
+    no era muy precisa y ten\xEDa un alto retroceso. A pesar de estas limitaciones,
+    la STEN gun se utiliz\xF3 ampliamente en la Segunda Guerra Mundial y se convirti\xF3
+    en una de las armas m\xE1s emblem\xE1ticas de la \xE9poca. La STEN gun se utiliz\xF3
+    en numerosos escenarios, incluyendo la Batalla de Normand\xEDa y la Batalla de
+    Arnhem. La STEN gun tambi\xE9n fue utilizada por otros pa\xEDses despu\xE9s de
+    la Segunda Guerra Mundial, y se convirti\xF3 en un arma popular entre los grupos
+    guerrilleros y las fuerzas de seguridad en todo el mundo. "
   imagen: {fileID: 21300000, guid: 2758557673f4bf04ca496c436dc94b76, type: 3}
 --- !u!114 &991867834
 MonoBehaviour:
@@ -1680,15 +1882,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titulo: Webley Revolver
-  texto: "Es un fusil semiautom\xE1tico de calibre .30 que fue el fusil de servicio
-    est\xE1ndar de los Estados Unidos durante la Segunda Guerra Mundial y la Guerra
-    de Corea y tambi\xE9n vio un servicio limitado durante la Guerra de Vietnam.
-    La mayor\xEDa de los fusiles M1 fueron suministrados a las fuerzas armadas estadounidenses,
-    aunque tambi\xE9n se proporcionaron muchos cientos de miles como ayuda extranjera
-    a los aliados estadounidenses. El Garand todav\xEDa es utilizado por equipos
-    de entrenamiento militar y guardias militares de honor. Tambi\xE9n es ampliamente
-    utilizado por civiles para la caza, tiro al blanco y como objeto de colecci\xF3n
-    militar."
+  texto: 'Fabricante: Webley & Scott Ltd. '
+  texto1: "Pa\xEDs de producci\xF3n: Reino Unido. "
+  texto2: "A\xF1os de fabricaci\xF3n: 1887 - 1963. "
+  texto3: "Tipo de armamento: Rev\xF3lver de doble acci\xF3n. "
+  texto4: "El Webley Revolver fue utilizado por las fuerzas brit\xE1nicas durante
+    la Primera y Segunda Guerra Mundial. Era un rev\xF3lver de doble acci\xF3n con
+    una capacidad de cargador de 6 cartuchos. Fue conocido por su fiabilidad y potencia
+    de fuego. "
   imagen: {fileID: 21300000, guid: acb55225d4f01664a81e7b82a8df2e8a, type: 3}
 --- !u!114 &1065030602
 MonoBehaviour:
@@ -1821,7 +2022,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -402, y: 291}
+  m_AnchoredPosition: {x: -411, y: 291}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1124866508
@@ -1867,7 +2068,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1124866509}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1200560984}
+        m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
+        m_MethodName: backCuriosidades
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1124866509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1956,6 +2169,7 @@ GameObject:
   - component: {fileID: 1200560981}
   - component: {fileID: 1200560983}
   - component: {fileID: 1200560982}
+  - component: {fileID: 1200560984}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -1975,7 +2189,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 972324610}
+  - {fileID: 1664692298}
   - {fileID: 883286502}
   - {fileID: 1124866507}
   m_Father: {fileID: 1561427349}
@@ -1999,7 +2213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.051886797, b: 0.051886797, a: 0.4392157}
+  m_Color: {r: 1, g: 0.8340919, b: 0.3915094, a: 0.4392157}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2024,6 +2238,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1200560980}
   m_CullTransparentMesh: 1
+--- !u!114 &1200560984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200560980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3127d2a5020153e438392a6814c1377d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1306959942
 GameObject:
   m_ObjectHideFlags: 0
@@ -2243,15 +2469,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titulo: BREN
-  texto: "Es un fusil semiautom\xE1tico de calibre .30 que fue el fusil de servicio
-    est\xE1ndar de los Estados Unidos durante la Segunda Guerra Mundial y la Guerra
-    de Corea y tambi\xE9n vio un servicio limitado durante la Guerra de Vietnam.
-    La mayor\xEDa de los fusiles M1 fueron suministrados a las fuerzas armadas estadounidenses,
-    aunque tambi\xE9n se proporcionaron muchos cientos de miles como ayuda extranjera
-    a los aliados estadounidenses. El Garand todav\xEDa es utilizado por equipos
-    de entrenamiento militar y guardias militares de honor. Tambi\xE9n es ampliamente
-    utilizado por civiles para la caza, tiro al blanco y como objeto de colecci\xF3n
-    militar."
+  texto: "Fabricante: Royal Small Arms Factory (RSAF) Enfield, y otras compa\xF1\xEDas
+    bajo licencia en todo el mundo."
+  texto1: "Pa\xEDs de producci\xF3n: Reino Unido."
+  texto2: "A\xF1os de fabricaci\xF3n: 1937-1950."
+  texto3: 'Tipo de armamento: Ametralladora ligera.'
+  texto4: "La Bren light machine gun fue dise\xF1ada en el Reino Unido en la d\xE9cada
+    de 1930 por la RSAF Enfield, y fue ampliamente utilizada durante la Segunda Guerra
+    Mundial y tambi\xE9n despu\xE9s de la guerra. Era una ametralladora ligera de
+    caja abierta, accionada por retroceso y enfriada por aire, que disparaba el cartucho
+    .303 British. La Bren era conocida por su fiabilidad y precisi\xF3n, y ten\xEDa
+    un alcance efectivo de hasta 600 metros. La Bren se utiliz\xF3 en diversos conflictos,
+    incluyendo la Segunda Guerra Mundial, la Guerra de Corea y la Guerra de las Malvinas.
+    Tambi\xE9n fue adoptada por muchas naciones de la Commonwealth y se fabric\xF3
+    bajo licencia en varios pa\xEDses."
   imagen: {fileID: 21300000, guid: 2a2466e101c1aff44bec6e9a8e1fd749, type: 3}
 --- !u!114 &1547803909
 MonoBehaviour:
@@ -2501,15 +2732,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titulo: M1 Thompson
-  texto: "Es un fusil semiautom\xE1tico de calibre .30 que fue el fusil de servicio
-    est\xE1ndar de los Estados Unidos durante la Segunda Guerra Mundial y la Guerra
-    de Corea y tambi\xE9n vio un servicio limitado durante la Guerra de Vietnam.
-    La mayor\xEDa de los fusiles M1 fueron suministrados a las fuerzas armadas estadounidenses,
-    aunque tambi\xE9n se proporcionaron muchos cientos de miles como ayuda extranjera
-    a los aliados estadounidenses. El Garand todav\xEDa es utilizado por equipos
-    de entrenamiento militar y guardias militares de honor. Tambi\xE9n es ampliamente
-    utilizado por civiles para la caza, tiro al blanco y como objeto de colecci\xF3n
-    militar."
+  texto: 'Fabricante: Auto-Ordnance Corporation '
+  texto1: "Pa\xEDs de producci\xF3n: Estados Unidos "
+  texto2: "A\xF1os de fabricaci\xF3n: 1921-1945 "
+  texto3: 'Tipo de armamento: Subfusil '
+  texto4: "La Thompson submachine gun, tambi\xE9n conocida como Tommy gun, es un
+    subfusil estadounidense que fue dise\xF1ado por John T. Thompson en la d\xE9cada
+    de 1910 y producido por la compa\xF1\xEDa Auto-Ordnance Corporation. La Thompson
+    submachine gun disparaba cartuchos de .45 ACP y ten\xEDa un cargador de tambor
+    de 50 cartuchos o un cargador recto de 20 o 30 cartuchos. Ten\xEDa una cadencia
+    de fuego de hasta 900 disparos por minuto y un alcance efectivo de hasta 200
+    metros. La Thompson submachine gun se convirti\xF3 en un arma ic\xF3nica durante
+    la \xE9poca de la Ley Seca en Estados Unidos, ya que muchos g\xE1nsteres y pandilleros
+    la utilizaban para cometer cr\xEDmenes. Durante la Segunda Guerra Mundial, la
+    Thompson submachine gun fue utilizada por las fuerzas aliadas, incluyendo las
+    tropas estadounidenses y brit\xE1nicas. A pesar de su eficacia en el campo de
+    batalla, la Thompson submachine gun era costosa y dif\xEDcil de producir en grandes
+    cantidades, y fue reemplazada por otros subfusiles m\xE1s econ\xF3micos y f\xE1ciles
+    de producir despu\xE9s de la guerra. "
   imagen: {fileID: 21300000, guid: 19af2da0730701b44ad2de8bef6322ea, type: 3}
 --- !u!114 &1609441134
 MonoBehaviour:
@@ -2605,6 +2845,163 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1609441131}
   m_CullTransparentMesh: 1
+--- !u!1 &1657678020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1657678021}
+  - component: {fileID: 1657678023}
+  - component: {fileID: 1657678022}
+  m_Layer: 5
+  m_Name: Informacion (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1657678021
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657678020}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 972324610}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 125.756165, y: -58}
+  m_SizeDelta: {x: 793.1977, y: 41.9279}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1657678022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657678020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 877a8c46a1af3df4d8cd2000ad892a92, type: 3}
+    m_FontSize: 12
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &1657678023
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657678020}
+  m_CullTransparentMesh: 1
+--- !u!1 &1664692297
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1664692298}
+  - component: {fileID: 1664692300}
+  - component: {fileID: 1664692299}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1664692298
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664692297}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 972324610}
+  m_Father: {fileID: 1200560981}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 124.37958, y: 0}
+  m_SizeDelta: {x: -248.7592, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1664692299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664692297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1664692300
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664692297}
+  m_CullTransparentMesh: 1
 --- !u!1 &1782462923
 GameObject:
   m_ObjectHideFlags: 0
@@ -2658,15 +3055,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titulo: STG44
-  texto: "Es un fusil semiautom\xE1tico de calibre .30 que fue el fusil de servicio
-    est\xE1ndar de los Estados Unidos durante la Segunda Guerra Mundial y la Guerra
-    de Corea y tambi\xE9n vio un servicio limitado durante la Guerra de Vietnam.
-    La mayor\xEDa de los fusiles M1 fueron suministrados a las fuerzas armadas estadounidenses,
-    aunque tambi\xE9n se proporcionaron muchos cientos de miles como ayuda extranjera
-    a los aliados estadounidenses. El Garand todav\xEDa es utilizado por equipos
-    de entrenamiento militar y guardias militares de honor. Tambi\xE9n es ampliamente
-    utilizado por civiles para la caza, tiro al blanco y como objeto de colecci\xF3n
-    militar."
+  texto: 'Fabricante: C.G. Haenel Waffen und Fahrradfabrik, Walther, Spreewerk y
+    otros fabricantes alemanes '
+  texto1: "Pa\xEDs de producci\xF3n: Alemania "
+  texto2: "A\xF1os de fabricaci\xF3n: 1943-1945 "
+  texto3: 'Tipo de armamento: Fusil de asalto '
+  texto4: "La StG 44, tambi\xE9n conocida como Sturmgewehr 44, fue un fusil de asalto
+    dise\xF1ado y fabricado en Alemania durante la Segunda Guerra Mundial. Fue el
+    primer fusil de asalto de la historia y estableci\xF3 el concepto de este tipo
+    de arma. La StG 44 disparaba cartuchos de 7,92 mm y ten\xEDa un cargador de 30
+    cartuchos. Ten\xEDa una cadencia de fuego de hasta 500 disparos por minuto y
+    un alcance efectivo de hasta 300 metros. La StG 44 fue dise\xF1ada para ser utilizada
+    por la infanter\xEDa en combates a corta y media distancia, y su dise\xF1o compacto
+    y ligero la hac\xEDa m\xE1s f\xE1cil de manejar en el campo de batalla. La StG
+    44 fue utilizada por el Ej\xE9rcito alem\xE1n en diversas batallas de la Segunda
+    Guerra Mundial, incluyendo la Batalla de las Ardenas y la Batalla de Berl\xEDn.
+    La StG 44 fue considerada una de las armas m\xE1s importantes y revolucionarias
+    de su tiempo, y su dise\xF1o influenci\xF3 a numerosos fabricantes de armas en
+    todo el mundo despu\xE9s de la guerra. "
   imagen: {fileID: 21300000, guid: 9e102dff604417e4d90999079b557846, type: 3}
 --- !u!114 &1782462926
 MonoBehaviour:
@@ -2762,6 +3168,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1782462923}
   m_CullTransparentMesh: 1
+--- !u!1 &1852882355
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1852882356}
+  - component: {fileID: 1852882358}
+  - component: {fileID: 1852882357}
+  m_Layer: 5
+  m_Name: Informacion (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1852882356
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852882355}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 972324610}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 125.756165, y: -18}
+  m_SizeDelta: {x: 793.1977, y: 35.624}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1852882357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852882355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 877a8c46a1af3df4d8cd2000ad892a92, type: 3}
+    m_FontSize: 12
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &1852882358
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852882355}
+  m_CullTransparentMesh: 1
 --- !u!1 &2016144587
 GameObject:
   m_ObjectHideFlags: 0
@@ -2815,15 +3301,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titulo: Luger P08
-  texto: "Es un fusil semiautom\xE1tico de calibre .30 que fue el fusil de servicio
-    est\xE1ndar de los Estados Unidos durante la Segunda Guerra Mundial y la Guerra
-    de Corea y tambi\xE9n vio un servicio limitado durante la Guerra de Vietnam.
-    La mayor\xEDa de los fusiles M1 fueron suministrados a las fuerzas armadas estadounidenses,
-    aunque tambi\xE9n se proporcionaron muchos cientos de miles como ayuda extranjera
-    a los aliados estadounidenses. El Garand todav\xEDa es utilizado por equipos
-    de entrenamiento militar y guardias militares de honor. Tambi\xE9n es ampliamente
-    utilizado por civiles para la caza, tiro al blanco y como objeto de colecci\xF3n
-    militar."
+  texto: "Fabricante: Imperio Alem\xE1n / Alemania Nazi "
+  texto1: "Pa\xEDs de producci\xF3n: Alemania "
+  texto2: "A\xF1os de fabricaci\xF3n: 1915-1945 "
+  texto3: 'Tipo de armamento: Granada de mano '
+  texto4: "La Stielhandgranate 24 fue una granada de mano utilizada por las fuerzas
+    alemanas durante la Primera y Segunda Guerra Mundial. La granada ten\xEDa un
+    dise\xF1o distintivo con una cabeza de carga explosiva y un mango de madera que
+    permit\xEDa que la granada fuera lanzada a mayores distancias. Al retirar el
+    anillo de seguridad, el soldado pod\xEDa activar la granada tirando de un cord\xF3n
+    que hac\xEDa saltar la cabeza de carga. La Stielhandgranate 24 fue una de las
+    granadas de mano m\xE1s utilizadas por los soldados alemanes durante la Segunda
+    Guerra Mundial."
   imagen: {fileID: 21300000, guid: 3b2efd8d0a824e94582cbf6c12a79b4d, type: 3}
 --- !u!114 &2016144590
 MonoBehaviour:
@@ -2972,15 +3461,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titulo: BAR
-  texto: "Es un fusil semiautom\xE1tico de calibre .30 que fue el fusil de servicio
-    est\xE1ndar de los Estados Unidos durante la Segunda Guerra Mundial y la Guerra
-    de Corea y tambi\xE9n vio un servicio limitado durante la Guerra de Vietnam.
-    La mayor\xEDa de los fusiles M1 fueron suministrados a las fuerzas armadas estadounidenses,
-    aunque tambi\xE9n se proporcionaron muchos cientos de miles como ayuda extranjera
-    a los aliados estadounidenses. El Garand todav\xEDa es utilizado por equipos
-    de entrenamiento militar y guardias militares de honor. Tambi\xE9n es ampliamente
-    utilizado por civiles para la caza, tiro al blanco y como objeto de colecci\xF3n
-    militar."
+  texto: 'Fabricante: Browning Arms Company. '
+  texto1: "Pa\xEDs de producci\xF3n: Estados Unidos. "
+  texto2: "A\xF1os de fabricaci\xF3n: 1917-1957. "
+  texto3: 'Tipo de armamento: Ametralladora ligera. '
+  texto4: "Es una ametralladora ligera dise\xF1ada por John Browning en Estados Unidos
+    a finales de la Primera Guerra Mundial. La BAR fue utilizada como arma est\xE1ndar
+    de infanter\xEDa del Ej\xE9rcito de Estados Unidos durante la Segunda Guerra
+    Mundial y la Guerra de Corea. Disparaba cartuchos de 7,62 mm y pod\xEDa ser utilizada
+    tanto en modo semiautom\xE1tico como autom\xE1tico, con una cadencia de fuego
+    de hasta 550 disparos por minuto. La BAR ten\xEDa un alcance efectivo de hasta
+    600 metros y era alimentada por cargador. A pesar de su eficacia en el campo
+    de batalla, la BAR ten\xEDa algunas desventajas, como su peso y su retroceso,
+    que la hac\xEDan dif\xEDcil de manejar para algunos soldados. Se desarrollaron
+    varias versiones de la BAR, incluyendo la BAR M1918A1 y la BAR M1918A2. La BAR
+    tambi\xE9n fue utilizada por otros pa\xEDses y por grupos guerrilleros en todo
+    el mundo."
   imagen: {fileID: 21300000, guid: 00fde9a682088d64fb196d3e4a8d708a, type: 3}
 --- !u!114 &2026462161
 MonoBehaviour:
@@ -3169,15 +3665,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titulo: Colt 1911
-  texto: "Es un fusil semiautom\xE1tico de calibre .30 que fue el fusil de servicio
-    est\xE1ndar de los Estados Unidos durante la Segunda Guerra Mundial y la Guerra
-    de Corea y tambi\xE9n vio un servicio limitado durante la Guerra de Vietnam.
-    La mayor\xEDa de los fusiles M1 fueron suministrados a las fuerzas armadas estadounidenses,
-    aunque tambi\xE9n se proporcionaron muchos cientos de miles como ayuda extranjera
-    a los aliados estadounidenses. El Garand todav\xEDa es utilizado por equipos
-    de entrenamiento militar y guardias militares de honor. Tambi\xE9n es ampliamente
-    utilizado por civiles para la caza, tiro al blanco y como objeto de colecci\xF3n
-    militar."
+  texto: 'Fabricante: Colt''s Manufacturing Company. '
+  texto1: "Pa\xEDs de producci\xF3n: Estados Unidos. "
+  texto2: "A\xF1os de fabricaci\xF3n: 1911 - 1970. "
+  texto3: "Tipo de armamento: Pistola semiautom\xE1tica. "
+  texto4: "La pistola Colt M1911 fue dise\xF1ada por John Browning y fue adoptada
+    por el Ej\xE9rcito de los Estados Unidos en 1911. Fue utilizada durante la Primera
+    y Segunda Guerra Mundial y en otros conflictos hasta los a\xF1os 70. La pistola
+    ten\xEDa una capacidad de cargador de 7 cartuchos y era muy precisa y fiable. "
   imagen: {fileID: 21300000, guid: d2c6942d76071964bb5c82c289d5d483, type: 3}
 --- !u!114 &2036946488
 MonoBehaviour:

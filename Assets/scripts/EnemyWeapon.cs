@@ -8,42 +8,42 @@ public class EnemyWeapon : MonoBehaviour
 
     public GameObject BulletPrefab;
 
-    private bool PlayerOnRange = false;
-    private float timeToAttack = 1.5f;
-    private float delay = 0.2f;
-    private float attack;
+    public bool PlayerOnRange = false;
+    public float timeToAttack = 1.5f;
+    public float delay = 0.5f;
+    public float attack;
+    public bool first = false;
 
 
-    void Update()
+    /*void Update()
     {
-        
-        if (PlayerOnRange == true && attack <= 0)
+        if (PlayerOnRange == true && attack <= 0)//
         {
-            shoot();
             attack = timeToAttack;
+            shoot();
+        
         }
-        else if(PlayerOnRange == true && attack > 0)
+        else if(PlayerOnRange == true && attack > 0)//PlayerOnRange == true 
         {
             attack -= Time.deltaTime; 
         }
 
-    }
+    }*/
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             PlayerOnRange = true;
-            transform.GetComponentInParent<EnemyFunction>().patrolRange = true;
 
-            if (collision.transform.position.x < transform.position.x && transform.GetComponentInParent<EnemyFunction>().right)
+            /*if (collision.transform.position.x < transform.position.x && transform.GetComponentInParent<EnemyFunction>().right)
             {
                 transform.GetComponentInParent<EnemyFunction>().flip();
             }
             else if (collision.transform.position.x > transform.position.x && !transform.GetComponentInParent<EnemyFunction>().right)
             {
                 transform.GetComponentInParent<EnemyFunction>().flip();
-            }
+            }*/
         }
 
     }
@@ -58,7 +58,7 @@ public class EnemyWeapon : MonoBehaviour
     }
 
 
-    void shoot()
+    public void shoot()
     {
         //que se spawn, donde y la rotacion
         Instantiate(BulletPrefab, FirePoint.position, FirePoint.rotation);

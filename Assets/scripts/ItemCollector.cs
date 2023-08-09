@@ -11,11 +11,16 @@ public class ItemCollector : MonoBehaviour
 
     public int Bullets = 0;
     public int Bullets2 = 0;
+    public int Soldiers = 0;
 
     [SerializeField] private AudioSource CollectSound;
 
     [SerializeField] private Text BulletsText;
     [SerializeField] private Text bullets2Text;
+
+    [SerializeField] private Text salvadosText;
+    public int salvados = 0;
+    public int TotalSoldados;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -44,8 +49,6 @@ public class ItemCollector : MonoBehaviour
             Destroy(collision.gameObject);
         }
         
-
-
     }
 
     public void WriteOntext(int bullets, int bala)
@@ -84,6 +87,11 @@ public class ItemCollector : MonoBehaviour
             WriteOntext(Bullets2, 1);
         }
         
+    }
+
+    public void writeSalvados(int soldadoSalvado)
+    {
+        salvadosText.text = "Salvados: " + soldadoSalvado;
     }
 
 }

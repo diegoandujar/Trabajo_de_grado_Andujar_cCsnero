@@ -17,6 +17,8 @@ TagManager:
   - BulletColect
   - BulletCollect2
   - terrain
+  - LCVP
+  - soldierDecor
   layers:
   - Default
   - TransparentFX

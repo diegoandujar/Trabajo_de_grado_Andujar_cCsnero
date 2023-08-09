@@ -11,16 +11,17 @@ public class PlayerMovement : MonoBehaviour
     /// 
 
     private float dirX = 0f;
-    [SerializeField] private float moveSpeed = 7f;
+    [SerializeField] public float moveSpeed = 7f;
     [SerializeField] private float jumpSpeed = 7f;
 
     private bool right = true;
 
     private SpriteRenderer SpRen;
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     private Animator anim;
     private BoxCollider2D coll;
     public bool mover = true;
+    public bool helping = false;
 
     [SerializeField] private LayerMask jumpableGround;
 
@@ -30,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
     
 
     // asi se tienen las animaciones de los movimientos en un mismo sitio
-    private enum MovementState { idle, running, jumping, falling};
+    private enum MovementState { idle, running, jumping, falling, helping};
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +49,15 @@ public class PlayerMovement : MonoBehaviour
         // getAxisRaw se detiene de una, sin el raw no se detiene de una sino que va disminuyendo poco a poco el movimiento
 
         // Jump y horizontal son direcciones a las teclas que unitiy nos da para esos movimientos horizontal(left right a and d) jump(space)
+        if (helping == true && mover == false)
+        {
+            Debug.Log("Player");
+            Debug.Log(mover + "---entrada---" + helping);
+            AnimantionUpdate();
+            mover = true;
+            helping = false;
+            Debug.Log(mover + "---salida---" + helping);
+        }
 
         if (mover == true)
         {
@@ -62,10 +72,12 @@ public class PlayerMovement : MonoBehaviour
 
             AnimantionUpdate();
         }
+
+        
         
     }
 
-    private void AnimantionUpdate()
+    public void AnimantionUpdate()
     {
         // se llama al conjunto de "movimeintos", y se colocan en donde se necesitan para la transision
         MovementState state;
@@ -105,6 +117,11 @@ public class PlayerMovement : MonoBehaviour
         else if (rb.velocity.y < -.1)
         {
             state = MovementState.falling;
+        }
+
+        if (helping == true)
+        {
+            state = MovementState.helping;
         }
 
         anim.SetInteger("state", (int)state);

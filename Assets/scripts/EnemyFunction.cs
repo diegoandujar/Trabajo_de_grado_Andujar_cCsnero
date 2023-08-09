@@ -23,31 +23,89 @@ public class EnemyFunction : MonoBehaviour
     private float dirX = 0f;
 
 
+    private Transform player;
+
+    private EnemyWeapon weapon;
+
     private enum MovementStates {idle, running};
+
+    private bool tooClose;
 
     private void Start()
     {
+        player = GameObject.Find("Player").GetComponent<Transform>();
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         SpRen = GetComponent<SpriteRenderer>();
+        weapon = GetComponent<EnemyWeapon>();
     }
 
     void Update()
     {
-        if (patrolRange == true && right)
+        /*if (patrolRange == true && right)
         {
             transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
         }
         else if(patrolRange == true && !right)
         {
-            transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
+            transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
 
+        }*/
+
+        if (player.position.x > transform.position.x && patrolRange)
+        {
+            if (!right)
+            {
+                flip();
+                transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
+                tooClose = false;
+            }
+            else
+            {
+                transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
+                tooClose = false;
+            }
+
+        }
+        else if (player.position.x < transform.position.x && patrolRange)
+        {
+            if (right)
+            {
+                flip();
+                transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
+                tooClose = false;
+            }
+            else
+            {
+                transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
+                tooClose = false;
+            }
+        }
+
+        if (weapon.PlayerOnRange == true && weapon.attack <= 0)//
+        {
+            weapon.attack = weapon.timeToAttack;
+            weapon.shoot();
+
+        }
+        else if (weapon.PlayerOnRange == true && weapon.attack > 0)//PlayerOnRange == true 
+        {
+            weapon.attack -= Time.deltaTime;
         }
 
         AnimantionUpdate();
     }
 
-    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        patrolRange = false;
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        patrolRange = true;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
@@ -113,7 +171,6 @@ public class EnemyFunction : MonoBehaviour
         right = !right;
 
         transform.Rotate(0f, 180f, 0f);
-
     }
 
     public void SpawnItem()

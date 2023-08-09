@@ -10,17 +10,20 @@ public class Finish : MonoBehaviour
 
     private bool LevelCompleted = false;
 
+    private ItemCollector item;
+    
+
     // Start is called before the first frame update
     void Start()
     {
-
+        item = GameObject.Find("Player").GetComponent<ItemCollector>();
         FinishSound = GetComponent<AudioSource>();
 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.name == "Player" && !LevelCompleted)
+        if(collision.gameObject.name == "Player" && !LevelCompleted && item.salvados==3)
         {
             FinishSound.Play();
             LevelCompleted = true;
