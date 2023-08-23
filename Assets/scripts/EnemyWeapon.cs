@@ -14,6 +14,8 @@ public class EnemyWeapon : MonoBehaviour
     public float attack;
     public bool first = false;
 
+    [SerializeField] private AudioSource GunShot;
+
 
     /*void Update()
     {
@@ -61,6 +63,8 @@ public class EnemyWeapon : MonoBehaviour
     public void shoot()
     {
         //que se spawn, donde y la rotacion
+        
         Instantiate(BulletPrefab, FirePoint.position, FirePoint.rotation);
+        GunShot.Play();
     }
 }

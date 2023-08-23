@@ -14,6 +14,8 @@ public class BunkerWeapon : MonoBehaviour
     private float timeToAttack = 1.5f;
     private float attack;
 
+    [SerializeField] AudioSource GunShot;
+
     void Update()
     {
 
@@ -51,6 +53,7 @@ public class BunkerWeapon : MonoBehaviour
     void shoot()
     {
         //que se spawn, donde y la rotacion
+        GunShot.Play();
         Instantiate(BulletPrefab, FirePoint.position, FirePoint.rotation);
     }
 }

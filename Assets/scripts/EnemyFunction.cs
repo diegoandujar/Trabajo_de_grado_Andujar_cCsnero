@@ -27,6 +27,10 @@ public class EnemyFunction : MonoBehaviour
 
     private EnemyWeapon weapon;
 
+    [SerializeField] private GameObject arma;
+
+    //[SerializeField] AudioSource Gun;
+
     private enum MovementStates {idle, running};
 
     private bool tooClose;
@@ -38,6 +42,7 @@ public class EnemyFunction : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         SpRen = GetComponent<SpriteRenderer>();
         weapon = GetComponent<EnemyWeapon>();
+        
     }
 
     void Update()
@@ -85,6 +90,8 @@ public class EnemyFunction : MonoBehaviour
         if (weapon.PlayerOnRange == true && weapon.attack <= 0)//
         {
             weapon.attack = weapon.timeToAttack;
+            Debug.Log("dispara Enemigo");
+            //Gun.Play();
             weapon.shoot();
 
         }
@@ -156,7 +163,10 @@ public class EnemyFunction : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log(gameObject.name);
+        patrolRange = false;
+        weapon.PlayerOnRange = false;
+        //Debug.Log(gameObject.name);
+        Destroy(arma);
         anim.SetTrigger("deathEnemy");
         //Destroy(gameObject);   
     }

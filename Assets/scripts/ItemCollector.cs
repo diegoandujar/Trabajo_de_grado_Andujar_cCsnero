@@ -22,6 +22,9 @@ public class ItemCollector : MonoBehaviour
     public int salvados = 0;
     public int TotalSoldados;
 
+    public int bateries = 0;
+    //public int TotalBaterias;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("BulletColect"))
@@ -62,6 +65,11 @@ public class ItemCollector : MonoBehaviour
             bullets2Text.text = "Big Bullets: " + Bullets2;
         }
        
+    }
+
+    public void WriteBaterias(int bateriasDestruidas)
+    {
+        salvadosText.text = "Baterias: " + bateriasDestruidas;
     }
 
     public int Bulletcoutns()

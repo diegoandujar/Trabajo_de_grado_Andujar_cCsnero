@@ -20,8 +20,12 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     private Animator anim;
     private BoxCollider2D coll;
+    
     public bool mover = true;
+
     public bool helping = false;
+
+    public bool Planting = false;
 
     [SerializeField] private LayerMask jumpableGround;
 
@@ -31,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     
 
     // asi se tienen las animaciones de los movimientos en un mismo sitio
-    private enum MovementState { idle, running, jumping, falling, helping};
+    private enum MovementState { idle, running, jumping, falling, helping, planting};
 
     // Start is called before the first frame update
     void Start()
@@ -49,18 +53,12 @@ public class PlayerMovement : MonoBehaviour
         // getAxisRaw se detiene de una, sin el raw no se detiene de una sino que va disminuyendo poco a poco el movimiento
 
         // Jump y horizontal son direcciones a las teclas que unitiy nos da para esos movimientos horizontal(left right a and d) jump(space)
-        if (helping == true && mover == false)
-        {
-            Debug.Log("Player");
-            Debug.Log(mover + "---entrada---" + helping);
-            AnimantionUpdate();
-            mover = true;
-            helping = false;
-            Debug.Log(mover + "---salida---" + helping);
-        }
-
+        
+        
+        
         if (mover == true)
         {
+            //Debug.Log("no se mueve");
             dirX = Input.GetAxisRaw("Horizontal");
             rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
             
@@ -73,7 +71,25 @@ public class PlayerMovement : MonoBehaviour
             AnimantionUpdate();
         }
 
+        if (helping == true)
+        {
+            rb.velocity = new Vector2(0, 0);
+            //Debug.Log("Player");
+            //Debug.Log(mover + "---entrada---" + helping);
+            AnimantionUpdate();
+            mover = true;
+            helping = false;
+            //Debug.Log(mover + "---salida---" + helping);
+        }
         
+        if (Planting == true)
+        {
+            rb.velocity = new Vector2(0, 0);
+            AnimantionUpdate();
+            //Debug.Log("entro a salvar y bomba");
+            mover = true;
+            Planting = false;   
+        }
         
     }
 
@@ -122,6 +138,11 @@ public class PlayerMovement : MonoBehaviour
         if (helping == true)
         {
             state = MovementState.helping;
+        }
+
+        if (Planting == true)
+        {
+            state = MovementState.planting;
         }
 
         anim.SetInteger("state", (int)state);

@@ -23,7 +23,7 @@ public class Finish : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.name == "Player" && !LevelCompleted && item.salvados==3)
+        if(collision.gameObject.name == "Player" && !LevelCompleted && item.salvados==item.TotalSoldados)
         {
             FinishSound.Play();
             LevelCompleted = true;

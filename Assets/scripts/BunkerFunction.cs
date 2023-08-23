@@ -14,6 +14,8 @@ public class BunkerFunction : MonoBehaviour
 
     private Animator anim;
 
+    [SerializeField] private AudioSource explosion;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,7 @@ public class BunkerFunction : MonoBehaviour
 
     public void DestroyBunker()
     {
+        explosion.Play();
         anim.SetTrigger("Destroy");
         //Instantiate(botiquin, transform.position, transform.rotation);
         //Destroy(gameObject);

@@ -11,6 +11,8 @@ public class PlayerDeath : MonoBehaviour
     private Animator anim;
     private Rigidbody2D rig;
 
+    private BoxCollider2D box;
+
     public int PlayerHealth = 100;
 
     [SerializeField] private AudioSource DeadSound;
@@ -21,6 +23,7 @@ public class PlayerDeath : MonoBehaviour
         healthbar.Setmaxvalue(PlayerHealth);
         anim = GetComponent<Animator>();
         rig = GetComponent<Rigidbody2D>();
+        box = GetComponent<BoxCollider2D>();
     }
 
     //En los objetos con los que "chocamos" se taggean para poder tener un control de lo que son y ademas tener la facilidad de buscarlos
@@ -52,6 +55,7 @@ public class PlayerDeath : MonoBehaviour
     private void Die()
     {
         rig.bodyType = RigidbodyType2D.Static;
+        box.isTrigger = true;
         anim.SetTrigger("death");
     }
 
