@@ -18,12 +18,12 @@ public class StartMenu : MonoBehaviour
 
     public void Armas()
     {
-        SceneManager.LoadScene(7);
+        SceneManager.LoadScene(9);
     }
 
     public void Character()
     {
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene(8);
     }
 
     public void backMenu()
@@ -32,24 +32,24 @@ public class StartMenu : MonoBehaviour
     }
     public void backCuriosidades()
     {
-        SceneManager.LoadScene(8);
+        SceneManager.LoadScene(10);
     }
 
     public void curiosidades()
     {
-        SceneManager.LoadScene(8);
+        SceneManager.LoadScene(10);
     }
     public void Zonas()
     {
-        SceneManager.LoadScene(9);
+        SceneManager.LoadScene(11);
     }
     public void Unidades()
     {
-        SceneManager.LoadScene(10);
+        SceneManager.LoadScene(12);
     }
     public void Batallas()
     {
-        SceneManager.LoadScene(11);
+        SceneManager.LoadScene(13);
     }
 
 }

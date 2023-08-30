@@ -40,6 +40,9 @@ public class BullletMovement : MonoBehaviour
             Destroy(gameObject);
             collision.gameObject.GetComponent<BunkerFunction>().TakeDamege(gun.BulletDamage);
             Debug.Log("el dano hecho al bunker es de: "+gun.BulletDamage);
+        }else if (collision.gameObject.CompareTag("terrain"))
+        {
+            Destroy(gameObject);
         }
 
        

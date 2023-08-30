@@ -8,7 +8,10 @@ public class CharactersInfo : MonoBehaviour
     [SerializeField] public string texto1;
     [SerializeField] public string texto2;
     [SerializeField] public string texto3;
+    [SerializeField] public string texto4;
+    [SerializeField] public string texto5;
     [SerializeField] public Sprite imagen;
+    [SerializeField] public AudioSource Narracion;
 
     private TextoCharacters textoPanel;
 
@@ -30,6 +33,11 @@ public class CharactersInfo : MonoBehaviour
     public void clickBatalles()
     {
         textoPanel.printBatallas(titulo, texto1, texto2, texto3);
+    }
+
+    public void printArmas()
+    {
+        textoPanel.printArmas(titulo, texto1, texto2, texto3, texto4, texto5, imagen, Narracion);
     }
 
 }

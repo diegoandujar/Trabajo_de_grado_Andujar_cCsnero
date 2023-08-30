@@ -29,6 +29,12 @@ public class Finish : MonoBehaviour
             LevelCompleted = true;
             Invoke("LevelComplete", 2f); //Esto hace un deleay para hacer la transicion mas lenta, y se utilizo el invoke en vez de hacer con una animacion, ya que no hay
         }
+        else if(collision.gameObject.name == "Player" && !LevelCompleted && item.bateries==9)
+        {
+            FinishSound.Play();
+            LevelCompleted = true;
+            Invoke("LevelComplete", 2f); //Esto hace un deleay para hacer la transicion mas lenta, y se utilizo el invoke en vez de hacer con una animacion, ya que no hay
+        }
     }
 
     private void LevelComplete()
