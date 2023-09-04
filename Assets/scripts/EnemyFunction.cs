@@ -28,6 +28,9 @@ public class EnemyFunction : MonoBehaviour
     private EnemyWeapon weapon;
 
     [SerializeField] private GameObject arma;
+    [SerializeField] private AudioSource morir;
+
+    private bool vivo = true;
 
     //[SerializeField] AudioSource Gun;
 
@@ -56,51 +59,58 @@ public class EnemyFunction : MonoBehaviour
             transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
 
         }*/
-
-        if (player.position.x > transform.position.x && patrolRange)
+        if (vivo == true)
         {
-            if (!right)
+
+        
+            if (player.position.x > transform.position.x && patrolRange)
             {
-                flip();
-                transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
-                tooClose = false;
+                if (!right)
+                {
+                    flip();
+                    transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
+                    tooClose = false;
+                }
+                else
+                {
+                    transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
+                    tooClose = false;
+                }
+
             }
-            else
+            else if (player.position.x < transform.position.x && patrolRange)
             {
-                transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
-                tooClose = false;
+                if (right)
+                {
+                    flip();
+                    transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
+                    tooClose = false;
+                }
+                else
+                {
+                    transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
+                    tooClose = false;
+                }
             }
 
-        }
-        else if (player.position.x < transform.position.x && patrolRange)
-        {
-            if (right)
+            if (weapon.PlayerOnRange == true && weapon.attack <= 0)//
             {
-                flip();
-                transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
-                tooClose = false;
+                weapon.attack = weapon.timeToAttack;
+                Debug.Log("dispara Enemigo");
+                //Gun.Play();
+                weapon.shoot();
+
             }
-            else
+            else if (weapon.PlayerOnRange == true && weapon.attack > 0)//PlayerOnRange == true 
             {
-                transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
-                tooClose = false;
+                weapon.attack -= Time.deltaTime;
             }
+            
+            AnimantionUpdate();
+        
         }
 
-        if (weapon.PlayerOnRange == true && weapon.attack <= 0)//
-        {
-            weapon.attack = weapon.timeToAttack;
-            Debug.Log("dispara Enemigo");
-            //Gun.Play();
-            weapon.shoot();
-
-        }
-        else if (weapon.PlayerOnRange == true && weapon.attack > 0)//PlayerOnRange == true 
-        {
-            weapon.attack -= Time.deltaTime;
-        }
-
-        AnimantionUpdate();
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -139,6 +149,8 @@ public class EnemyFunction : MonoBehaviour
 
         if(health <= 0 && numberDead == 0)
         {
+            vivo = false;
+            weapon.PlayerOnRange = false;
             Die();
             //getRandomItem();
             SpawnItem();
@@ -163,8 +175,7 @@ public class EnemyFunction : MonoBehaviour
 
     private void Die()
     {
-        patrolRange = false;
-        weapon.PlayerOnRange = false;
+        morir.Play();
         //Debug.Log(gameObject.name);
         Destroy(arma);
         anim.SetTrigger("deathEnemy");

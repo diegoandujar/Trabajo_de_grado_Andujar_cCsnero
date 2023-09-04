@@ -31,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
     //audios
     [SerializeField] private AudioSource JumpingSound;
+    [SerializeField] public AudioSource Health;
 
     
 
@@ -137,6 +138,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (helping == true)
         {
+            Health.Play();
             state = MovementState.helping;
         }
 

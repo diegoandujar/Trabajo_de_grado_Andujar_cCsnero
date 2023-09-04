@@ -22,17 +22,17 @@ public class CharactersInfo : MonoBehaviour
 
     public void click()
     {
-        textoPanel.printTextoCharac(titulo, texto1, texto2, texto3, imagen);
+        textoPanel.printTextoCharac(titulo, texto1, texto2, texto3, imagen, Narracion);
     }
 
     public void clickUnidades()
     {
-        textoPanel.printUnidades(titulo, texto1, imagen);
+        textoPanel.printUnidades(titulo, texto1, imagen, Narracion);
     }
 
     public void clickBatalles()
     {
-        textoPanel.printBatallas(titulo, texto1, texto2, texto3);
+        textoPanel.printBatallas(titulo, texto1, texto2, texto3, Narracion);
     }
 
     public void printArmas()

@@ -14,8 +14,14 @@ public class TextoCharacters : MonoBehaviour
     [SerializeField] public Image imagen;
     [SerializeField] public AudioSource currentAudio = null;
 
-    public void printTextoCharac(string Titulo, string Texto, string Texto1, string Texto2, Sprite Character)
+    public void printTextoCharac(string Titulo, string Texto, string Texto1, string Texto2, Sprite Character, AudioSource audio)
     {
+        if (currentAudio != null)
+        {
+            currentAudio.Stop();
+        }
+        currentAudio = audio;
+        currentAudio.Play();
         titulo.text = Titulo;
         texto.text = Texto;
         texto2.text = Texto1;
@@ -24,16 +30,28 @@ public class TextoCharacters : MonoBehaviour
         imagen.color = new Color(255, 255, 255, 112);
     }
 
-    public void printUnidades(string Titulo, string Texto, Sprite Logo)
+    public void printUnidades(string Titulo, string Texto, Sprite Logo, AudioSource audio)
     {
+        if (currentAudio != null)
+        {
+            currentAudio.Stop();
+        }
+        currentAudio = audio;
+        currentAudio.Play();
         titulo.text = Titulo;
         texto.text = Texto;
         imagen.sprite = Logo;
         imagen.color = new Color(255, 255, 255, 112);
     }
 
-    public void printBatallas(string Titulo, string Texto1, string Texto2, string Texto3)
+    public void printBatallas(string Titulo, string Texto1, string Texto2, string Texto3, AudioSource audio)
     {
+        if (currentAudio != null)
+        {
+            currentAudio.Stop();
+        }
+        currentAudio = audio;
+        currentAudio.Play();
         titulo.text = Titulo;
         texto.text = Texto1;
         texto2.text = Texto2;

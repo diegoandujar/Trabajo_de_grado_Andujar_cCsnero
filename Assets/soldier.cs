@@ -20,6 +20,8 @@ public class soldier : MonoBehaviour
     private Rigidbody2D rgb;
     private ItemCollector item;
 
+    [SerializeField] private GameObject GUNBullets;
+
     [SerializeField] BoxCollider2D Notrigger;
 
     private enum MovementState { Hurt, Move, Idle };
@@ -52,6 +54,7 @@ public class soldier : MonoBehaviour
 
         if (OnRange == true && Input.GetKeyDown("c"))
         {
+            SpawItem();
             Debug.Log("Soldier");
             Debug.Log(plmove.mover + "---entrada---" + plmove.helping);
             plmove.mover = false;
@@ -123,6 +126,12 @@ public class soldier : MonoBehaviour
 
         transform.Rotate(0f, 180f, 0f);
 
+    }
+
+    private void SpawItem()
+    {
+        Vector2 EnemyPos = new Vector2(transform.position.x + 1, transform.position.y - 0.2f);
+        Instantiate(GUNBullets, EnemyPos, Quaternion.identity);
     }
 
 }

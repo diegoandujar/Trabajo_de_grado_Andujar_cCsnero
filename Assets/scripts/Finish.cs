@@ -11,14 +11,17 @@ public class Finish : MonoBehaviour
     private bool LevelCompleted = false;
 
     private ItemCollector item;
-    
+
+    private Animator anim;
+
+    [SerializeField] bool ameica;
 
     // Start is called before the first frame update
     void Start()
     {
         item = GameObject.Find("Player").GetComponent<ItemCollector>();
         FinishSound = GetComponent<AudioSource>();
-
+        anim = GetComponent<Animator>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -27,15 +30,19 @@ public class Finish : MonoBehaviour
         {
             FinishSound.Play();
             LevelCompleted = true;
-            Invoke("LevelComplete", 2f); //Esto hace un deleay para hacer la transicion mas lenta, y se utilizo el invoke en vez de hacer con una animacion, ya que no hay
+            anim.SetTrigger("UP");
+            //Invoke("LevelComplete", 2f); //Esto hace un deleay para hacer la transicion mas lenta, y se utilizo el invoke en vez de hacer con una animacion, ya que no hay
         }
         else if(collision.gameObject.name == "Player" && !LevelCompleted && item.bateries==9)
         {
             FinishSound.Play();
             LevelCompleted = true;
-            Invoke("LevelComplete", 2f); //Esto hace un deleay para hacer la transicion mas lenta, y se utilizo el invoke en vez de hacer con una animacion, ya que no hay
+            anim.SetTrigger("UPB");
+            //Invoke("LevelComplete", 2f); //Esto hace un deleay para hacer la transicion mas lenta, y se utilizo el invoke en vez de hacer con una animacion, ya que no hay
         }
     }
+
+
 
     private void LevelComplete()
     {

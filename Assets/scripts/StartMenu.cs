@@ -51,5 +51,10 @@ public class StartMenu : MonoBehaviour
     {
         SceneManager.LoadScene(13);
     }
+    public void Salir()
+    {
+        Debug.Log("epale saliste");
+        Application.Quit();
+    }
 
 }

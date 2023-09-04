@@ -10,12 +10,18 @@ public class PlayerDeath : MonoBehaviour
 
     private Animator anim;
     private Rigidbody2D rig;
+    private Weapon weapon;
+
+    private PlayerMovement movement;
 
     private BoxCollider2D box;
+    private bool alive = true;
 
     public int PlayerHealth = 100;
 
     [SerializeField] private AudioSource DeadSound;
+    [SerializeField] private AudioSource HurtSound;
+    [SerializeField] private AudioSource mine;
 
     // Start is called before the first frame update
     private void Start()
@@ -24,6 +30,8 @@ public class PlayerDeath : MonoBehaviour
         anim = GetComponent<Animator>();
         rig = GetComponent<Rigidbody2D>();
         box = GetComponent<BoxCollider2D>();
+        weapon = GetComponent<Weapon>();
+        movement = GetComponent<PlayerMovement>();
     }
 
     //En los objetos con los que "chocamos" se taggean para poder tener un control de lo que son y ademas tener la facilidad de buscarlos
@@ -31,6 +39,7 @@ public class PlayerDeath : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("mine"))
         {
+            mine.Play();
             DeadSound.Play();
             collision.gameObject.GetComponent<Animator>().SetTrigger("explosion");
             Die();     
@@ -43,17 +52,20 @@ public class PlayerDeath : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("mine"))
         {
+            mine.Play();
             DeadSound.Play();
             Die();
         }
-    }
+    }*/
 
     private void Die()
     {
+        alive = false;
+        weapon.canShoot = false;
         rig.bodyType = RigidbodyType2D.Static;
         box.isTrigger = true;
         anim.SetTrigger("death");
@@ -66,20 +78,27 @@ public class PlayerDeath : MonoBehaviour
 
     public void TakeDamege(int damage)
     {
-        PlayerHealth -= damage;
-        Debug.Log("Player health = "+PlayerHealth);
-        healthbar.UpdateHealthbar(PlayerHealth);
-
-        if (PlayerHealth <= 0)
+        if (alive == true)
         {
-            DeadSound.Play();
-            Die();
+            HurtSound.Play();
+            PlayerHealth -= damage;
+            Debug.Log("Player health = "+PlayerHealth);
+            healthbar.UpdateHealthbar(PlayerHealth);
+
+            if (PlayerHealth <= 0)
+            {
+                alive = false;
+                DeadSound.Play();
+                Die();
+            }
         }
+        
 
     }
 
     public void takeHealth(int item)
     {
+        movement.Health.Play();
         if (item == 0)
         {
             PlayerHealth = 100;

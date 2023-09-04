@@ -27,6 +27,7 @@ public class videoFunction : MonoBehaviour
 
     public void playVideo()
     {
+        Time.timeScale = 0f;
         weaponState = weapon.canShoot;
         player.mover = false;
         weapon.canShoot = false;
@@ -38,6 +39,7 @@ public class videoFunction : MonoBehaviour
     
     public void stopVideo(VideoPlayer vp)
     {
+        Time.timeScale = 1f;
         cross.SetActive(false);
         gameObject.SetActive(false);
         player.mover = true;

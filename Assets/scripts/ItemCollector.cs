@@ -31,14 +31,14 @@ public class ItemCollector : MonoBehaviour
         {
             CollectSound.Play();
             Destroy(collision.gameObject);
-            Bullets = Bullets + 10;
+            Bullets = Bullets + 5;
             WriteOntext(Bullets,0);
         }
         else if (collision.gameObject.CompareTag("BulletCollect2"))
         {
             CollectSound.Play();
             Destroy(collision.gameObject);
-            Bullets2 = Bullets2 + 10;
+            Bullets2 = Bullets2 + 5;
             WriteOntext(Bullets2,1);
         }
         else if (collision.CompareTag("Botiquin"))

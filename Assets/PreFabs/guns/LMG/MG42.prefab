@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4412087180819228911}
   - component: {fileID: 4412087180819228910}
   m_Layer: 0
-  m_Name: M1911
+  m_Name: MG42
   m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 7ac1d7357829b6040a74a414fc5aa075, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e03fa67ff385d8542b0964b579b706a9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e9d0596623c3214184b74f261e8f09c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemButton: {fileID: 7919835970495099031, guid: bca95c4af72d9bd499a86d292290f183, type: 3}
+  itemButton: {fileID: 7919835970495099031, guid: 3cb744ab73304a94a96aa3b124b56ae8, type: 3}
 --- !u!61 &4412087180819228910
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -112,7 +112,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01608491, y: 0.042779386}
+  m_Offset: {x: 0.0061383247, y: 0.18167391}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -123,5 +123,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1387749, y: 1.054758}
+  m_Size: {x: 2.2499313, y: 0.7769689}
   m_EdgeRadius: 0
