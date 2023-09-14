@@ -17,12 +17,13 @@ public class BateriaFunction : MonoBehaviour
     [SerializeField] private AudioSource explosion;
 
     private ItemCollector item;
-
+    private Weapon arma;
     private PlayerMovement plmove;
 
     // Start is called before the first frame update
     void Start()
     {
+        arma = GameObject.Find("Player").GetComponent<Weapon>();
         anim = GetComponent<Animator>();
         item = GameObject.Find("Player").GetComponent<ItemCollector>();
         plmove = GameObject.Find("Player").GetComponent<PlayerMovement>();
@@ -37,6 +38,7 @@ public class BateriaFunction : MonoBehaviour
             {
                 plmove.Planting = true;
                 plmove.mover = false;
+                arma.canShoot = false;
                 Die();
             }
         }

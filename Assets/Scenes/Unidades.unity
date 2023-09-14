@@ -372,6 +372,7 @@ GameObject:
   - component: {fileID: 582268230}
   - component: {fileID: 582268229}
   - component: {fileID: 582268228}
+  - component: {fileID: 582268232}
   m_Layer: 5
   m_Name: Rangers (3)
   m_TagString: Untagged
@@ -411,24 +412,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d64fabf09f06264480a1bbf5132d3e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  titulo: Panzer Division
-  texto1: "La divisi\xF3n Panzer, o Panzerdivision en alem\xE1n, era una unidad militar
-    de combate combinado auto-suficiente del ej\xE9rcito alem\xE1n, construida alrededor
-    y que derivaba su misi\xF3n en gran medida de las capacidades de los veh\xEDculos
-    de combate blindados. Una divisi\xF3n Panzer en la Segunda Guerra Mundial consist\xEDa
-    en una brigada de tanques con cuatro batallones, una brigada de infanter\xEDa
-    motorizada con cuatro batallones de fusileros, un regimiento de artiller\xEDa,
-    y batallones de reconocimiento, antitanque e ingenieros, as\xED como unidades
-    de servicio. Al principio de la guerra, las divisiones Panzer usaban principalmente
-    tanques ligeros, y m\xE1s tarde usaban principalmente tanques medios. Las primeras
-    tres divisiones Panzer se crearon en octubre de 1935, y para el estallido de
-    la guerra en 1939 ya hab\xEDa seis. Las divisiones Panzer formaron la fuerza
-    de ataque decisiva del ej\xE9rcito alem\xE1n en las campa\xF1as contra Polonia
-    en 1939, los Pa\xEDses Bajos, B\xE9lgica, Luxemburgo y Francia en 1940, y los
-    Balcanes y la Uni\xF3n Sovi\xE9tica en 1941. "
+  titulo: "352\xAA Divisi\xF3n de Infanter\xEDa"
+  texto1: "Seg\xFAn todos los est\xE1ndares, la 352.\xAA Divisi\xF3n de Infanter\xEDa
+    era la mejor divisi\xF3n de infanter\xEDa en el \xE1rea, por lo que el Generalfeldmarschall
+    Rommel logr\xF3 retenerla en Francia bajo su mando de Heeresgruppe B. El 15 de
+    marzo de 1944, la divisi\xF3n fue trasladada desde Saint-L\xF4 y llevada m\xE1s
+    cerca de las playas de Normand\xEDa para apoyar a la sobreextendida 716.\xAA
+    Divisi\xF3n de Infanter\xEDa. Krai\xDF insert\xF3 algunos de sus batallones entre
+    los de la 716.\xAA para fortalecer su resistencia, manteniendo otros en reserva
+    justo detr\xE1s, y comenz\xF3 a mejorar los campos de minas y las defensas en
+    la l\xEDnea de costa en su sector. Aunque el movimiento fue detectado por la
+    Resistencia y la informaci\xF3n fue transmitida a Londres, los planificadores
+    aliados aparentemente no parecieron tenerlo en cuenta. Por lo tanto, en el D\xEDa-D,
+    cuando la primera oleada de tropas estadounidenses lleg\xF3 a la playa de Omaha,
+    esperaban encontrar solo una resistencia ligera de los hombres \"demasiado viejos,
+    demasiado j\xF3venes\" de la 716.\xAA Divisi\xF3n de Infanter\xEDa."
   texto2: 
   texto3: 
-  imagen: {fileID: 21300000, guid: 7cef271bb26a54b41945dcdc0d56d488, type: 3}
+  texto4: 
+  texto5: 
+  imagen: {fileID: 21300000, guid: eaae86c3ac46879469d57bdea1cb5eda, type: 3}
+  Narracion: {fileID: 582268232}
 --- !u!114 &582268229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -523,6 +527,102 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 582268226}
   m_CullTransparentMesh: 1
+--- !u!82 &582268232
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582268226}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 237ca2b4e3d5fbe4495a992b04312927, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &618749286
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,6 +716,7 @@ GameObject:
   - component: {fileID: 706683222}
   - component: {fileID: 706683221}
   - component: {fileID: 706683220}
+  - component: {fileID: 706683224}
   m_Layer: 5
   m_Name: Rangers (5)
   m_TagString: Untagged
@@ -655,7 +756,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d64fabf09f06264480a1bbf5132d3e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  titulo: 91st Infantry Division
+  titulo: "Regimiento de Granaderos 1058, Regimiento de Artiller\xEDa 191, 91. Divisi\xF3n
+    de Infanter\xEDa "
   texto1: "La 91. Infanterie-Division fue formada en enero de 1944 y en marzo de
     1944 fue redesignada como Infanterie-Division (Luftlande). Aunque estaba destinada
     y equipada para operaciones de aterrizaje a\xE9reo, la divisi\xF3n fue trasladada
@@ -666,7 +768,10 @@ MonoBehaviour:
     fue desbandada el 10 de agosto de 1944."
   texto2: 
   texto3: 
+  texto4: 
+  texto5: 
   imagen: {fileID: 21300000, guid: e8e0d690c2e639848933ffb97ebcc183, type: 3}
+  Narracion: {fileID: 706683224}
 --- !u!114 &706683221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -761,6 +866,102 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 706683218}
   m_CullTransparentMesh: 1
+--- !u!82 &706683224
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706683218}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d6f0f5a1374a85143adc28f7428ecbb3, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &722870859
 GameObject:
   m_ObjectHideFlags: 0
@@ -842,6 +1043,7 @@ GameObject:
   - component: {fileID: 851801401}
   - component: {fileID: 851801400}
   - component: {fileID: 851801399}
+  - component: {fileID: 851801403}
   m_Layer: 5
   m_Name: Rangers (2)
   m_TagString: Untagged
@@ -889,14 +1091,17 @@ MonoBehaviour:
     Combat Team (RCT) fue una de las pocas unidades en aterrizar en gran parte dentro
     de sus zonas de salto designadas en Normand\xEDa durante la fase inicial de la
     Operaci\xF3n OVERLORD. En los d\xEDas despu\xE9s del 6 de junio, el 505th RCT
-    defendi\xF3 la ciudad de Ste-M\xE8re-\xC9glise contra asaltos de tanques e infanter\xEDa
-    alemana, mientras sufr\xEDa bombardeos constantes de artiller\xEDa y morteros
-    alemanes. Durante este tiempo, el extenso entrenamiento antitanque del regimiento
-    (una prioridad durante su tiempo en Irlanda e Inglaterra) comenz\xF3 a dar sus
-    frutos. "
+    defendi\xF3 la ciudad de Sainte-M\xE8re-\xC9glise contra asaltos de tanques e
+    infanter\xEDa alemana, mientras sufr\xEDa bombardeos constantes de artiller\xEDa
+    y morteros alemanes. Durante este tiempo, el extenso entrenamiento antitanque
+    del regimiento (una prioridad durante su tiempo en Irlanda e Inglaterra) comenz\xF3
+    a dar sus frutos. "
   texto2: 
   texto3: 
+  texto4: 
+  texto5: 
   imagen: {fileID: 21300000, guid: 3a85cdf28fd212d43b517fdf0de391ff, type: 3}
+  Narracion: {fileID: 851801403}
 --- !u!114 &851801400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -991,6 +1196,102 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 851801397}
   m_CullTransparentMesh: 1
+--- !u!82 &851801403
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851801397}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 92dc2a30b66338741b9195fe87c9adb3, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &883286501
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,7 +1385,10 @@ MonoBehaviour:
   texto: {fileID: 542213938}
   texto2: {fileID: 0}
   texto3: {fileID: 0}
+  texto4: {fileID: 0}
+  texto5: {fileID: 0}
   imagen: {fileID: 348420544}
+  currentAudio: {fileID: 0}
 --- !u!1 &1052670854
 GameObject:
   m_ObjectHideFlags: 0
@@ -1354,6 +1658,7 @@ GameObject:
   - component: {fileID: 1200560987}
   - component: {fileID: 1200560986}
   - component: {fileID: 1200560985}
+  - component: {fileID: 1200560989}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -1434,6 +1739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3127d2a5020153e438392a6814c1377d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  click: {fileID: 1200560989}
 --- !u!114 &1200560985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1507,6 +1813,102 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!82 &1200560989
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200560980}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f962fdffbcbc974469758370eddfa59d, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1264296135
 GameObject:
   m_ObjectHideFlags: 0
@@ -1520,6 +1922,7 @@ GameObject:
   - component: {fileID: 1264296139}
   - component: {fileID: 1264296138}
   - component: {fileID: 1264296137}
+  - component: {fileID: 1264296141}
   m_Layer: 5
   m_Name: Rangers (4)
   m_TagString: Untagged
@@ -1572,7 +1975,10 @@ MonoBehaviour:
     donde fue destruida en enero de 1945. "
   texto2: 
   texto3: 
+  texto4: 
+  texto5: 
   imagen: {fileID: 21300000, guid: 3969146c50008774798cb71cbf8b4293, type: 3}
+  Narracion: {fileID: 1264296141}
 --- !u!114 &1264296138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1667,6 +2073,102 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264296135}
   m_CullTransparentMesh: 1
+--- !u!82 &1264296141
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264296135}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 67c99ab8899138a44bdb4a4a6eaea755, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1408843534
 GameObject:
   m_ObjectHideFlags: 0
@@ -1979,6 +2481,7 @@ GameObject:
   - component: {fileID: 1605319452}
   - component: {fileID: 1605319451}
   - component: {fileID: 1605319450}
+  - component: {fileID: 1605319454}
   m_Layer: 5
   m_Name: Rangers (1)
   m_TagString: Untagged
@@ -2028,10 +2531,13 @@ MonoBehaviour:
     la bater\xEDa de ca\xF1ones clave de Merville y particip\xF3 en los intensos
     combates defensivos alrededor de Ranville y Breville antes de que la 6.\xAA Divisi\xF3n
     Aerotransportada fuera retirada de nuevo al Reino Unido despu\xE9s del avance
-    en agosto."
+    en agosto. "
   texto2: 
   texto3: 
+  texto4: 
+  texto5: 
   imagen: {fileID: 21300000, guid: 4a0fd188cb70b4d4095bb47b0a6494d3, type: 3}
+  Narracion: {fileID: 1605319454}
 --- !u!114 &1605319451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2126,6 +2632,102 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1605319448}
   m_CullTransparentMesh: 1
+--- !u!82 &1605319454
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605319448}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6db5efc9179bb534bbff44572bffca79, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2071365377
 GameObject:
   m_ObjectHideFlags: 0
@@ -2139,6 +2741,7 @@ GameObject:
   - component: {fileID: 2071365381}
   - component: {fileID: 2071365380}
   - component: {fileID: 2071365379}
+  - component: {fileID: 2071365383}
   m_Layer: 5
   m_Name: Rangers
   m_TagString: Untagged
@@ -2179,20 +2782,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titulo: 75th Ranger Regiment
-  texto1: "El Ej\xE9rcito de los Estados Unidos no ten\xEDa unidades de operaciones
-    especiales en 1941. Eso cambi\xF3 r\xE1pidamente cuando Estados Unidos declar\xF3
-    la guerra al Eje y entr\xF3 en la Segunda Guerra Mundial. El brigadier general
-    Lucian K. Truscott Jr., enlace del Ej\xE9rcito de los Estados Unidos con la sede
-    de Operaciones Combinadas brit\xE1nica, propuso al jefe de Estado Mayor General
-    del Ej\xE9rcito, George C. Marshall, el 26 de mayo de 1942, que \"inmediatamente
-    iniciemos la organizaci\xF3n de una unidad estadounidense siguiendo las l\xEDneas
-    de los Comandos brit\xE1nicos\". Un cable pronto sigui\xF3 del Departamento de
-    Guerra al mayor general Russell P. Hartle, quien estaba al mando de las Fuerzas
-    del Ej\xE9rcito de los Estados Unidos en Irlanda del Norte, autorizando la activaci\xF3n
-    de la 1\xAA unidad de Rangers. "
+  texto1: "El D\xEDa-D, Rudder y su fuerza del 2.\xBA Batall\xF3n de Rangers, compuesta
+    por 225 soldados, junto con el Teniente Coronel Max Schneider y el 5.\xBA Batall\xF3n
+    de Rangers en apoyo, llevar\xEDan a cabo la misi\xF3n de escalar estos acantilados
+    antes del amanecer de ese fat\xEDdico d\xEDa y neutralizar las posiciones enemigas
+    en la cima de Pointe du Hoc. Rudder, quien hab\xEDa estado al mando del 2.\xBA
+    Batall\xF3n de Rangers desde su activaci\xF3n el 1 de abril de 1943 en Camp Forrest,
+    Tennessee, fue en gran medida responsable de desarrollar el plan para sus Rangers
+    en el D\xEDa-D. "
   texto2: 
   texto3: 
+  texto4: 
+  texto5: 
   imagen: {fileID: 21300000, guid: 284b5ebd3a525e34ea0f450518106837, type: 3}
+  Narracion: {fileID: 2071365383}
 --- !u!114 &2071365380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2287,3 +2890,99 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2071365377}
   m_CullTransparentMesh: 1
+--- !u!82 &2071365383
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071365377}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 7fed79554808d3240bbf41ccaef80cb7, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

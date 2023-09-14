@@ -24,6 +24,7 @@ public class EnemyFunction : MonoBehaviour
 
 
     private Transform player;
+    private PlayerDeath playerdeath;
 
     private EnemyWeapon weapon;
 
@@ -41,6 +42,7 @@ public class EnemyFunction : MonoBehaviour
     private void Start()
     {
         player = GameObject.Find("Player").GetComponent<Transform>();
+        playerdeath = GameObject.Find("Player").GetComponent<PlayerDeath>();
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         SpRen = GetComponent<SpriteRenderer>();
@@ -59,7 +61,7 @@ public class EnemyFunction : MonoBehaviour
             transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
 
         }*/
-        if (vivo == true)
+        if (vivo == true && playerdeath.alive==true)
         {
 
         

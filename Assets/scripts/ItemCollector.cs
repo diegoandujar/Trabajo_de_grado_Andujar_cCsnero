@@ -58,18 +58,18 @@ public class ItemCollector : MonoBehaviour
     {
         if (bala == 0)
         {
-            BulletsText.text = "Small Bullets: " + Bullets;
+            BulletsText.text = "Balas pequeñas: " + Bullets;
         }
         else
         {
-            bullets2Text.text = "Big Bullets: " + Bullets2;
+            bullets2Text.text = "Balas grandes: " + Bullets2;
         }
        
     }
 
     public void WriteBaterias(int bateriasDestruidas)
     {
-        salvadosText.text = "Baterias: " + bateriasDestruidas;
+        salvadosText.text = "Baterias: " + bateriasDestruidas+"/9";
     }
 
     public int Bulletcoutns()
@@ -99,7 +99,7 @@ public class ItemCollector : MonoBehaviour
 
     public void writeSalvados(int soldadoSalvado)
     {
-        salvadosText.text = "Salvados: " + soldadoSalvado;
+        salvadosText.text = "Salvados: " + soldadoSalvado+"/"+TotalSoldados;
     }
 
 }

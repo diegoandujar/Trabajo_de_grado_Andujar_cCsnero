@@ -15,7 +15,7 @@ public class PlayerDeath : MonoBehaviour
     private PlayerMovement movement;
 
     private BoxCollider2D box;
-    private bool alive = true;
+    public bool alive = true;
 
     public int PlayerHealth = 100;
 
@@ -42,11 +42,16 @@ public class PlayerDeath : MonoBehaviour
             mine.Play();
             DeadSound.Play();
             collision.gameObject.GetComponent<Animator>().SetTrigger("explosion");
-            Die();     
-        } 
+            Die();
+        }
         else if (collision.gameObject.CompareTag("trap"))
         {
             DeadSound.Play();
+            Die();
+        }
+        else if (collision.gameObject.CompareTag("watermark"))
+        {
+            HurtSound.Play();
             Die();
         }
 

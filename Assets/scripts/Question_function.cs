@@ -21,10 +21,18 @@ public class Question_function : MonoBehaviour
     private Text textoPregunta;
 
     [SerializeField] private float timeBetweenQuestions = 1f;
+    
+    [SerializeField] AudioSource correctSound;
+    [SerializeField] AudioSource errorSound;
+
+    private GameObject verdad;
+    private GameObject falso;
 
     // Start is called before the first frame update
     void Start()
     {
+        verdad = GameObject.Find("True");
+        falso = GameObject.Find("False");
         preguntasCorrectas = transform.GetComponent<PreguntasCorrectas>();
         
         if (Preguntas == null || Preguntas.Count == 0)
@@ -36,6 +44,7 @@ public class Question_function : MonoBehaviour
         Debug.Log(currentQuestion.Question + " es " + currentQuestion.isTrue);
 
     }
+
 
     void GetRandomQuestion()
     {
@@ -50,6 +59,8 @@ public class Question_function : MonoBehaviour
 
     IEnumerator TransitionToNextQuestion()
     {
+        verdad.SetActive(false);
+        falso.SetActive(false);
         yield return new WaitForSeconds(timeBetweenQuestions);
 
         if (Preguntas == null || Preguntas.Count == 0)
@@ -60,58 +71,109 @@ public class Question_function : MonoBehaviour
         GetRandomQuestion();
         Debug.Log(currentQuestion.Question + " es " + currentQuestion.isTrue);
 
+        verdad.SetActive(true);
+        falso.SetActive(true);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
     }
 
-    public void checkTrue()
+    IEnumerator wait()
     {
-        if (currentQuestion.isTrue)
+
+        textoPregunta.text = "preguntas correctas: " + preguntasCorrectas.CorrectAnswers + "/3";
+
+        yield return new WaitForSeconds(timeBetweenQuestions);
+
+        if (preguntasCorrectas.CorrectAnswers >= 2)
         {
-            preguntasCorrectas.sumar();
-            Debug.Log("preguntas correctas: " + preguntasCorrectas.CorrectAnswers);
-            textoPregunta.text = "Correct";
+            textoPregunta.text = "Pasaste de nivel !!!";
         }
         else
         {
-            Debug.Log("wrong");
-            textoPregunta.text = "wrong";
+            textoPregunta.text = "No pasaste de nivel !!!";
         }
 
+        yield return new WaitForSeconds(timeBetweenQuestions);
+
+
+        if (preguntasCorrectas.CorrectAnswers >= 2)
+        {
+            //textoPregunta.text = "epale";
+            //correctSound.Play();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        else
+        {
+            //errorSound.Play();
+            //textoPregunta.text = "hola";
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        }
+    }
+
+
+    public void check()
+    {
         if (numPreguntas == Preguntas.Count)
         {
+
+            StartCoroutine(wait());
+            
+        }
+        else
+        {
+            StartCoroutine(TransitionToNextQuestion());
+        }
+    }
+
+    public void checkTrue()
+    {
+
+        /*if (numPreguntas == Preguntas.Count)
+        {
+            textoPregunta.text = "preguntas correctas: " + preguntasCorrectas.CorrectAnswers;
+            new WaitForSeconds(timeBetweenQuestions);
             if (preguntasCorrectas.CorrectAnswers >= 2)
             {
+                
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
             else
             {
+                
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
             }
         }
         else
         {
             StartCoroutine(TransitionToNextQuestion());
+        }*/
+
+        if (currentQuestion.isTrue)
+        {
+            correctSound.Play();
+            preguntasCorrectas.sumar();
+            Debug.Log("preguntas correctas: " + preguntasCorrectas.CorrectAnswers);
+            textoPregunta.text = "Correcto";
         }
-        
+        else
+        {
+            errorSound.Play();
+            Debug.Log("wrong");
+            textoPregunta.text = "Error";
+        }
+
+        new WaitForSeconds(timeBetweenQuestions);
+        check();
+
     }
 
     public void checkFalse()
     {
-        if (!currentQuestion.isTrue)
-        {
-            preguntasCorrectas.sumar();
-            Debug.Log("preguntas correctas: "+ preguntasCorrectas.CorrectAnswers);            
-            textoPregunta.text = "Correct";
-        }
-        else
-        {
-            Debug.Log("wrong");
-            textoPregunta.text = "wrong";
-        }
 
-        if (numPreguntas == Preguntas.Count)
+        /*if (numPreguntas == Preguntas.Count)
         {
+            textoPregunta.text = "preguntas correctas: " + preguntasCorrectas.CorrectAnswers;
+            new WaitForSeconds(timeBetweenQuestions);
             if (preguntasCorrectas.CorrectAnswers >= 2)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -126,7 +188,24 @@ public class Question_function : MonoBehaviour
            
             Debug.Log(numPreguntas);
             StartCoroutine(TransitionToNextQuestion());
+        }*/
+
+        if (!currentQuestion.isTrue)
+        {
+            correctSound.Play();
+            preguntasCorrectas.sumar();
+            Debug.Log("preguntas correctas: "+ preguntasCorrectas.CorrectAnswers);            
+            textoPregunta.text = "Correcto";
         }
+        else
+        {
+            errorSound.Play();
+            Debug.Log("wrong");
+            textoPregunta.text = "Error";
+        }
+
+        new WaitForSeconds(timeBetweenQuestions);
+        check();
 
     }
 

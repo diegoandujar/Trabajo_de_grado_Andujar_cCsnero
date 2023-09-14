@@ -222,7 +222,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 936035650}
         m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: StartGame
+        m_MethodName: siguiente
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -510,13 +510,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.5
-  m_Text: "El Dia-D es uno de los d\xEDas m\xE1s importantes en la historia de la
-    humanidad, este ocurrio el 6 de junio de 1941, este dia dio por inicio la Operaci\xF3n
-    Overlord, dicha operaci\xF3n consist\xEDa en un gran desembarco en las playas
-    de Normandia, Francia con la finalidad de abrir un nuevo frente en la Europa
-    y reducir el dominio alem\xE1n, durante el primer dia de invasiones se estima
-    que murieron mas de 10000 aliados.\n\n\nTu mision es invadir la playa Omaha y
-    tomar control de la misma cueste lo que cueste"
+  m_Text: "\xA1Soldado! Ha llegado la hora, estamos en territorio franc\xE9s, despu\xE9s
+    un tumultuoso aterrizaje en paraca\xEDdas dentro de la zona \u2018O\u2019  tenemos
+    que tomar el pueblo, a lo largo de este hay muchos compatriotas ca\xEDdos, tu
+    misi\xF3n es rescatarlos a todos y liberar el pueblo, para lograr esto recuerda
+    guardar tus balas y cuidar tu espalda. \xC9xito en tu misi\xF3n y no lo olvides,
+    no dejes a ning\xFAn hombre atr\xE1s.\r\n\r\nTeniente William Ekman.\r\n"
 --- !u!222 &1224623346
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -758,7 +757,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: START
+  m_Text: SEGUIR
 --- !u!222 &2100336695
 CanvasRenderer:
   m_ObjectHideFlags: 0

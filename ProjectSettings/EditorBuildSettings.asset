@@ -9,32 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Start.unity
     guid: 5e97e2c1614043a43a7a38654a4cb589
   - enabled: 1
-    path: Assets/Scenes/story 1.unity
-    guid: b13e930bbddd9c04699b675b88491397
-  - enabled: 1
-    path: Assets/Scenes/Level 1.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/Questions 2.unity
-    guid: 573c9c0ce403e8c449b31e869a56d399
-  - enabled: 1
-    path: Assets/Scenes/story 2.unity
-    guid: 56ea5fb6f7d04c4498b2ac77fa93b09d
-  - enabled: 1
-    path: Assets/Scenes/Level 2.unity
-    guid: a80726166b212254cacf4c2b0e1d44d1
-  - enabled: 1
-    path: Assets/Scenes/Level 3.unity
-    guid: 322f309f2decb0f49848db53c6cfe8e0
-  - enabled: 1
-    path: Assets/Scenes/End screen.unity
-    guid: b220636ea48519c4eb95b40f370fbabb
+    path: Assets/Scenes/Armas.unity
+    guid: 9eee483d5db041d49b39d08ca3df79f5
   - enabled: 1
     path: Assets/Scenes/Characters.unity
     guid: 4101f4e425b0551419a20a21e8fc0916
-  - enabled: 1
-    path: Assets/Scenes/Armas.unity
-    guid: 9eee483d5db041d49b39d08ca3df79f5
   - enabled: 1
     path: Assets/Scenes/Curiosidades.unity
     guid: 0b65e948a3d7d2d4aa380f4afd56d5a3
@@ -47,4 +26,40 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Batallas.unity
     guid: 80f41487f1623834d885a50f96dd564c
+  - enabled: 1
+    path: Assets/Scenes/Paises.unity
+    guid: f0f5356fc73df234abf6f7c149c08af5
+  - enabled: 1
+    path: Assets/Scenes/story 1.unity
+    guid: b13e930bbddd9c04699b675b88491397
+  - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/preguntas 1.unity
+    guid: 573c9c0ce403e8c449b31e869a56d399
+  - enabled: 1
+    path: Assets/Scenes/story 2.unity
+    guid: 56ea5fb6f7d04c4498b2ac77fa93b09d
+  - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: a80726166b212254cacf4c2b0e1d44d1
+  - enabled: 1
+    path: Assets/Scenes/preguntas 2.unity
+    guid: f3a204af96dc3e140aee400ee1dfa9ad
+  - enabled: 1
+    path: Assets/Scenes/story 3.unity
+    guid: c99538b843ec9b14480e16f87b6212a0
+  - enabled: 1
+    path: Assets/Scenes/Level 3.unity
+    guid: 322f309f2decb0f49848db53c6cfe8e0
+  - enabled: 1
+    path: Assets/Scenes/preguntas 3.unity
+    guid: a35d4b4e482828d469aafb870d6d1f4f
+  - enabled: 1
+    path: Assets/Scenes/story 4.unity
+    guid: 14f01e47a74d5274a84436070529df64
+  - enabled: 1
+    path: Assets/Scenes/End screen.unity
+    guid: b220636ea48519c4eb95b40f370fbabb
   m_configObjects: {}
