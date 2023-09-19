@@ -487,7 +487,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3127d2a5020153e438392a6814c1377d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  click: {fileID: 936035654}
 --- !u!114 &936035651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1323,7 +1322,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: jUGAR DE NUEVO
+  m_Text: Jugar de nuevo
 --- !u!222 &2100336695
 CanvasRenderer:
   m_ObjectHideFlags: 0

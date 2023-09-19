@@ -782,7 +782,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 692123738}
         m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: Character
+        m_MethodName: Creditos
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1591,7 +1591,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1263935183}
         m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: curiosidades
+        m_MethodName: Instrucciones
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

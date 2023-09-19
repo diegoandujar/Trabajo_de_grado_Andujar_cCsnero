@@ -17,7 +17,7 @@ public class StartMenu : MonoBehaviour
     public void StartGame()
     {
 
-        SceneManager.LoadScene(7);
+        SceneManager.LoadScene(8);
     }
 
     public void StarAgain()
@@ -68,6 +68,16 @@ public class StartMenu : MonoBehaviour
     {
 
         SceneManager.LoadScene(6);
+    }
+    public void Creditos()
+    {
+
+        SceneManager.LoadScene(7);
+    }
+    public void Instrucciones()
+    {
+
+        SceneManager.LoadScene(24);
     }
     public void Salir()
     {
